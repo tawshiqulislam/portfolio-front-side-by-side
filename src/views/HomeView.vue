@@ -1,6 +1,6 @@
 <template>
-  <div class="container my-5">
-    <div class="row d-flex justify-content-around pb-5">
+  <div class="container mt-5">
+    <div class="row d-flex justify-content-around pb-2">
       <div
         class="about-box col-md-6 mx-2 mt-3 d-flex justify-content-start align-items-center"
       >
@@ -132,7 +132,7 @@ export default {
   data() {
     return {
       userData: {
-        authorName: "Mr. X",
+        authorName: "Mahmud Al Araf",
         homeMsg:
           " As a passionate full-stack web developer with a knack for creating stunning and functional websites. Have a strong foundation in both front-end and back-end development, I bring a holistic approach to every project I undertake.",
         authorImg: author,

@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-5 text-white">
+  <div class="container mt-2 text-white">
     <div class="row d-flex justify-content-around">
       <div class="col-md-12 text-right text-white">
         <h1 class="text-warning">
@@ -14,7 +14,7 @@
     </div>
     <Carousel v-bind="settings" :breakpoints="breakpoints">
       <Slide v-for="skill in skills" :key="skill">
-        <div class="carousel__item my-card mt-5" style="display: block">
+        <div class="carousel__item my-card mt-3" style="display: block">
           <div
             class="mt-4 px-4 badge rounded-pill text-warning"
             style="border: 2px solid rgb(255, 217, 0)"

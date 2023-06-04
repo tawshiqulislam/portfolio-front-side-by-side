@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-5 text-white">
+  <div class="container mt-2 text-white">
     <div class="row d-flex justify-content-around">
       <div class="col-md-12 text-right text-white">
         <h1 class="text-warning">Blogs</h1>
@@ -8,7 +8,7 @@
     </div>
     <Carousel v-bind="settings" :breakpoints="breakpoints">
       <Slide v-for="blog in blogs" :key="blog">
-        <div class="carousel__item d-flex flex-column my-card mt-5">
+        <div class="carousel__item d-flex flex-column my-card mt-2">
           <div class="top mb-3">
             <img
               class="blog-article"

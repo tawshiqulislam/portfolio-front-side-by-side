@@ -71,10 +71,10 @@ export default {
   data() {
     return {
       userData: {
-        authorName: "Jhon Smith",
+        authorName: "Mahmud Al Araf",
         homeMsg: [
-          "Welcome to my personal website! As a civil engineer, I have a passion for designing and building structures that improve people’s lives. On this website, you’ll find information about my experience and skills, as well as examples of my work.",
-          "Whether you’re looking to hire a civil engineer for your next project or just want to learn more about the field, I hope you find this website informative and engaging. Thank you for visiting!",
+          "From an early age, I was drawn to the world of technology and design. This fascination led me to pursue a career in web development. With a strong foundation in front-end development, I possess expertise in HTML, CSS, and JavaScript. On the back end, I'm proficient in languages such as Python and JavaScript, utilizing frameworks like Django and Node.js.",
+          "Beyond coding, I am an avid advocate for continuous learning and professional growth. I look forward to the opportunity to work with you on your next web development venture!",
         ],
         authorImg: author,
       },

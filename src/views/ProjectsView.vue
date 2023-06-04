@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-5 text-white">
+  <div class="container mt-2 text-white">
     <div class="row d-flex justify-content-around">
       <div class="col-md-12 text-right text-white">
         <h1 class="text-warning">PORTFOLIO</h1>
@@ -11,7 +11,7 @@
     </div>
     <Carousel v-bind="settings" :breakpoints="breakpoints">
       <Slide v-for="project in projects" :key="project">
-        <div class="carousel__item d-flex flex-column my-card mt-5">
+        <div class="carousel__item d-flex flex-column my-card mt-2">
           <div class="top mb-3">
             <img
               class="blog-article img-fluid"
@@ -104,7 +104,7 @@ export default defineComponent({
         image: pixel,
         category: "Task Management Dashboard",
         description:
-          "Developed a task management dashboard for a remote team. Implemented features like task assignment, progress tracking, and team collaboration tools. The dashboard improved team productivity and streamlined project management processes.",
+          "Developed a task management dashboard for a remote team. Implemented features like task assignment, progress tracking, and team collaboration tools.",
         tags: ["#task", "#management"],
       },
       {
@@ -112,7 +112,7 @@ export default defineComponent({
         image: pixel2,
         category: "Property Rental App",
         description:
-          " Created a mobile-responsive property rental application for a real estate agency. Implemented property listing with advanced search filters, integrated online booking and payment systems, and a review system. The app provided a seamless experience for property seekers and increased the efficiency of the rental process.",
+          " Created a mobile-responsive property rental application for a real estate agency. Implemented property listing with advanced search filters, integrated online booking and payment systems, and a review system.",
         tags: ["#Property", "#Rental", "#App"],
       },
       {
@@ -120,7 +120,7 @@ export default defineComponent({
         image: commerce,
         category: "E-Commerce Website",
         description:
-          " Developed a responsive e-commerce platform for a fashion retail brand. Implemented secure payment gateways, user-friendly product filtering, and inventory management system. The website saw a significant increase in sales and improved customer satisfaction.",
+          " Developed a responsive e-commerce platform for a fashion retail brand. Implemented secure payment gateways, user-friendly product filtering, and inventory management system.",
         tags: ["#e-commerce", "#marketplace"],
       },
       {
@@ -128,7 +128,7 @@ export default defineComponent({
         image: fresh,
         category: "Refresh Painting",
         description:
-          " User can take different services as their need, track status of their taken services, see all order history, pay online through credit card. Admin can add new service and delete service that no longer available. Admin can view all order of services and change status of services.Admin can add new admin",
+          " User can take different services as their need, track status of their taken services, see all order history, pay online through credit card. Admin can add new service and delete service that no longer available.",
         tags: ["#react", "#nodeJS", "#expressJS"],
       },
       {
@@ -136,7 +136,7 @@ export default defineComponent({
         image: gents,
         category: "Gents Glamor",
         description:
-          " Calling Cabs is a react app where you can find various types of transport system. We provide services of Family tour, Emergency transport, Goods transportation on reasonable price. This app is easy to use. Just select your desire vehicle and choose your pick up point and destination you will see it on map also.Thank you!",
+          " Calling Cabs is a react app where you can find various types of transport system. We provide services of Family tour, Emergency transport, Goods transportation on reasonable price. This app is easy to use.",
         tags: ["#React.js", "#NodeJS", "#ExpressJS"],
       },
       {
@@ -144,7 +144,7 @@ export default defineComponent({
         image: fly,
         category: "Discover Fly",
         description:
-          " User can buy his/her flight tickets. Here some input field like Flying From, Flying To, Departure Date, Return Date(optional), Number of First Class & Economy Class Tickets etc. Than calculate price with vat/tax. For submitting Form user can see his/her flight tickets. For more information user can his ticket print for Journey.",
+          " User can buy his/her flight tickets. Here some input field like Flying From, Flying To, Departure Date, Return Date(optional), Number of First Class & Economy Class Tickets etc. Than calculate price with vat/tax.",
         tags: ["#HTML", "#CSS", "#Bootstrap", "#JavaScript"],
       },
     ],
@@ -154,7 +154,7 @@ export default defineComponent({
 
 <style scoped>
 .top img {
-  max-width: 100% !important;
-  object-fit: cover;
+  width: 300px !important;
+  height: 160px !important;
 }
 </style>
