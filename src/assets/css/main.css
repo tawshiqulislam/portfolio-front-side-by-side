@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Slab:wght@500&display=swap');
+
+
+body {
+    background-color: #111A28;
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.my-card {
+    min-height: 300px;
+    width: 100%;
+    background-color: #51525426;
+    border-width: 3px;
+    border-style: groove;
+    border-color: rgba(255, 255, 255, 0.904);
+    box-shadow: inset 0 0 8px #e7e7e7c5;
+    font-size: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    /* color: ; */
+}
+
+.carousel__next,
+.carousel__prev {
+    background-color: rgb(255, 238, 0) !important;
+    height: 90px !important;
+}
+
+.carousel__prev {
+    left: -9% !important;
+    border-radius: 0 10px 10px 0 !important;
+    -webkit-border-radius: 0 10px 10px 0 !important;
+    -moz-border-radius: 0 10px 10px 0 !important;
+    -ms-border-radius: 0 10px 10px 0 !important;
+    -o-border-radius: 0 10px 10px 0 !important;
+}
+
+.carousel__next {
+    right: -9% !important;
+    border-radius: 10px 0 0 10px !important;
+    -webkit-border-radius: 10px 0 0 10px !important;
+    -moz-border-radius: 10px 0 0 10px !important;
+    -ms-border-radius: 10px 0 0 10px !important;
+    -o-border-radius: 10px 0 0 10px !important;
+}
+
+@media screen and (max-width: 1120px) {
+    .carousel__prev {
+        left: -4% !important;
+        border-radius: 0 10px 10px 0 !important;
+        -webkit-border-radius: 0 10px 10px 0 !important;
+        -moz-border-radius: 0 10px 10px 0 !important;
+        -ms-border-radius: 0 10px 10px 0 !important;
+        -o-border-radius: 0 10px 10px 0 !important;
+    }
+    
+    .carousel__next {
+        right: -40px !important;
+        border-radius: 10px 0 0 10px !important;
+        -webkit-border-radius: 10px 0 0 10px !important;
+        -moz-border-radius: 10px 0 0 10px !important;
+        -ms-border-radius: 10px 0 0 10px !important;
+        -o-border-radius: 10px 0 0 10px !important;
+    }
+}
+
+.carousel__slide {
+    padding: 10px !important;
+}
+
+.pagination {
+    color: azure !important;
+}
+
+.nav-link>i:hover {
+    color: rgb(255, 230, 0) !important;
+}
+
+.nav-link{
+    color:azure !important;
+}
+
+.carousel__pagination-button::after {
+    height: 12px !important;
+    border-radius: 50px !important;
+    background-color: rgb(255, 255, 255) !important;
+    -webkit-border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+    -ms-border-radius: 50px !important;
+    -o-border-radius: 50px !important;
+}
+
+.carousel__pagination-button:hover::after, .carousel__pagination-button--active::after {
+    background-color: #ffbf00 !important;
+}
