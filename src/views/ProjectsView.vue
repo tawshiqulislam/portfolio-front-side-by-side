@@ -3,10 +3,7 @@
     <div class="row d-flex justify-content-around">
       <div class="col-md-12 text-right text-white">
         <h1 class="text-warning">PORTFOLIO</h1>
-        <h1 class="text-white">MY RECENT WORK</h1>
-        <p class="text-white h">
-          I believe in code and that is my passion throughout my life.
-        </p>
+        <h3 class="text-white">MY RECENT WORK</h3>
       </div>
     </div>
     <Carousel v-bind="settings" :breakpoints="breakpoints">

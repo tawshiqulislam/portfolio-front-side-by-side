@@ -1,85 +1,4 @@
 <template>
-  <!-- Content -->
-  <vue-particles
-    id="tsparticles"
-    @particles-loaded="particlesLoaded"
-    :options="{
-      background: {
-        color: {
-          value: 'transparent',
-        },
-      },
-      fullScreen: {
-        enable: true,
-        zIndex: -1,
-      },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: 'push',
-          },
-          onHover: {
-            enable: true,
-            mode: 'repulse',
-          },
-        },
-        modes: {
-          bubble: {
-            distance: 400,
-            duration: 2,
-            opacity: 0.8,
-            size: 40,
-          },
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: '#ffffff',
-        },
-        links: {
-          color: '#ffffff',
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: 'none',
-          enable: true,
-          outModes: 'bounce',
-          random: false,
-          speed: 6,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 180,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: 'square',
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
-      },
-      detectRetina: true,
-    }"
-  />
-
   <div class="container mt-5">
     <div class="row d-flex justify-content-around pb-2">
       <div
@@ -194,9 +113,10 @@
       >
         <span
           >&copy; Developed By
-          <a href="mailto:tawshiq.rafi02@gmail.com" class="text-white"
-            >Tawshiqul Islam</a
-          ></span
+          <a href="" class="text-white">Texon Limited</a></span
+        >
+        <span
+          >&copy; Maintained By <a href="" class="text-white">OREZO</a></span
         >
       </div>
 
@@ -212,17 +132,12 @@ export default {
   data() {
     return {
       userData: {
-        authorName: "Md. Tawshiqul Islam Rafi",
+        authorName: "Mahmud Al Araf",
         homeMsg:
           " As a passionate full-stack web developer with a knack for creating stunning and functional websites. Have a strong foundation in both front-end and back-end development, I bring a holistic approach to every project I undertake.",
         authorImg: author,
       },
     };
-  },
-  methods: {
-    particlesLoaded() {
-      // console.log("Particles container loaded", container);
-    },
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav style="position: relative; z-index: 1">
     <div class="navbar container navbar-expand-sm justify-content-center">
       <div class="container-fluid">
         <router-link to="/" class="navbar-brand" href="#" @click="toggleBack"
