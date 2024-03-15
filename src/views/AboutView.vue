@@ -166,7 +166,7 @@
 </template>
 
 <script>
-import author from "../assets/image/author-image-home.jpg";
+import author from "../assets/image/about_img.png";
 export default {
   data() {
     return {
@@ -204,6 +204,7 @@ export default {
   border-radius: 20px;
   transform: translate(-25px, -23px);
   z-index: -1;
+  background-color: rgba(172, 172, 174, 0.322);
 }
 .img-box > img {
   height: 320px;

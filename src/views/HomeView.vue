@@ -228,7 +228,7 @@
 </template>
 
 <script>
-import author from "../assets/image/author-image-home.jpg";
+import author from "../assets/image/author-image-home.png";
 export default {
   data() {
     return {
