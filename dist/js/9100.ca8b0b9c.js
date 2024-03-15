@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[9100],{9100:function(n,o,a){a.d(o,{loadEasingQuadPlugin:function(){return u}});var e=a(5811);async function u(){(0,e.nL)("ease-in-quad",(n=>n**2)),(0,e.nL)("ease-out-quad",(n=>1-(1-n)**2)),(0,e.nL)("ease-in-out-quad",(n=>n<.5?2*n**2:1-(-2*n+2)**2/2)),await Promise.resolve()}}}]);
+//# sourceMappingURL=9100.ca8b0b9c.js.map

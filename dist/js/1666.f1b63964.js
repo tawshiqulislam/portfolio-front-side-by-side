@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[1666],{1666:function(e,t,r){r.d(t,{ShapeManager:function(){return o}});const n=new Map;class o{constructor(e){this._engine=e}addShapeGenerator(e,t){this.getShapeGenerator(e)||n.set(e,t)}getShapeGenerator(e){return n.get(e)}getSupportedShapeGenerators(){return n.keys()}}}}]);
+//# sourceMappingURL=1666.f1b63964.js.map

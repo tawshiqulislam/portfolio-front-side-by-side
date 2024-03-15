@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[8352],{8352:function(t,n,a){async function e(t,n=!0){await t.addParticleUpdater("opacity",(async t=>{const{OpacityUpdater:n}=await a.e(9188).then(a.bind(a,9188));return new n(t)}),n)}a.d(n,{loadOpacityUpdater:function(){return e}})}}]);
+//# sourceMappingURL=8352.a443dc18.js.map

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[6109],{6109:function(t,n,a){async function o(t,n=!0){const{StarDrawer:o}=await a.e(6272).then(a.bind(a,6272));await t.addShape("star",new o,n)}a.d(n,{loadStarShape:function(){return o}})}}]);
+//# sourceMappingURL=6109.016758c1.js.map

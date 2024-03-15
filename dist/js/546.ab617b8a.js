@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[546],{5714:function(t,n,o){o.d(n,{n:function(){return r}});var e=o(5811);class r{constructor(){this.quantity=2}load(t){if(!t)return;const n=t.quantity;void 0!==n&&(this.quantity=(0,e.DT)(n))}}},546:function(t,n,o){o.d(n,{loadExternalRemoveInteraction:function(){return e}});o(5714);async function e(t,n=!0){await t.addInteractor("externalRemove",(async t=>{const{Remover:n}=await o.e(4964).then(o.bind(o,4964));return new n(t)}),n)}}}]);
+//# sourceMappingURL=546.ab617b8a.js.map
