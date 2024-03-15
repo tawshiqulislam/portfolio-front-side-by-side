@@ -1,4 +1,104 @@
 <template>
+  <vue-particles
+    id="tsparticles"
+    @particles-loaded="particlesLoaded"
+    :options="{
+      background: {
+        color: {
+          value: 'transparent',
+        },
+      },
+      fullScreen: {
+        enable: true,
+        zIndex: -1,
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: 'push',
+          },
+          onHover: {
+            enable: true,
+            mode: 'grab',
+            parallax: {
+              enable: true,
+              force: 60,
+              smooth: 100,
+            },
+          },
+        },
+        modes: {
+          bubble: {
+            distance: 400,
+            duration: 2,
+            mix: false,
+            opacity: 0.8,
+            size: 40,
+          },
+          grab: {
+            distance: 400,
+            links: {
+              blink: false,
+              consent: false,
+              opacity: 1,
+            },
+          },
+          push: {
+            quantity: 4,
+          },
+          remove: {
+            quantity: 2,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+            factor: 100,
+            speed: 1,
+            maxSpeed: 50,
+            easing: ease - out - quad,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: '#ffffff',
+        },
+        links: {
+          color: '#ffffff',
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          direction: 'none',
+          enable: true,
+          outModes: 'bounce',
+          random: false,
+          speed: 6,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 220,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: 'square',
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }"
+  />
   <div class="container">
     <div class="row d-flex justify-content-around mt-2">
       <div class="col-md-12 text-right text-white">
@@ -84,6 +184,11 @@ export default {
         client: 70,
       },
     };
+  },
+  methods: {
+    particlesLoaded() {
+      // console.log("Particles container loaded", container);
+    },
   },
 };
 </script>

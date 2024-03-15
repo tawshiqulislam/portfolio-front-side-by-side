@@ -1,4 +1,83 @@
 <template>
+  <vue-particles
+    id="tsparticles"
+    @particles-loaded="particlesLoaded"
+    :options="{
+      background: {
+        color: {
+          value: 'transparent',
+        },
+      },
+      fullScreen: {
+        enable: true,
+        zIndex: -1,
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: 'push',
+          },
+          onHover: {
+            enable: true,
+            mode: 'repulse',
+          },
+        },
+        modes: {
+          bubble: {
+            distance: 400,
+            duration: 2,
+            opacity: 0.8,
+            size: 40,
+          },
+          push: {
+            quantity: 4,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: '#ffffff',
+        },
+        links: {
+          color: '#ffffff',
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          direction: 'none',
+          enable: true,
+          outModes: 'bounce',
+          random: false,
+          speed: 6,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 320,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: 'square',
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }"
+  />
   <div class="container">
     <div class="row d-flex justify-content-around">
       <div class="col-md-6">
@@ -19,14 +98,26 @@
           </form>
         </div>
       </div>
-      <div class="col-md-4 my-5 py-5" style="margin-left: 50px !important">
+      <div class="col-md-4 py-5" style="margin-left: 50px !important">
         <p class="text-warning h1">Would You Like To</p>
-        <p class="text-white h2">Get A Free Consaltancy</p>
+        <p class="text-info h2">Get A Free Consaltancy</p>
         <p class="text-white mt-3">
           I'm excited to discuss your web development needs. So, I offer free
           consultancy to help you navigate through the process. Whether you need
           advice on technology choices, project planning, or overall strategy.
           <br />
+          Also, I like to talk about<br />
+        </p>
+        <ul class="mt-3 text-warning">
+          <li>different ideas,</li>
+          <li>future project planning,</li>
+          <li>system architecture,</li>
+          <li>planning about start-ups,</li>
+          <li>discussion about solving problem,</li>
+          <li>and new ways to acquire markets.</li>
+        </ul>
+        <p class="text-white mt-3">
+          Let's have a discussion and bring up some new ideas.
           <br />
           Let's collaborate and bring your web ideas to life!
         </p>
@@ -37,6 +128,15 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    particlesLoaded() {
+      // console.log("Particles container loaded", container);
+    },
+  },
+};
+</script>
 <style scoped>
 * {
   -webkit-box-sizing: border-box;
@@ -68,13 +168,17 @@ body {
   margin: 50px auto;
   box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);
   margin-left: 0;
+  background-color: #00882271;
+  /* border-radius: 0 0 10px 10px; */
+  border-radius: 10px;
 }
 
 .contact .head {
   padding: 30px;
-  background-color: #00184f00;
+  background-color: #007abc71;
   color: #fefefe;
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 
 .contact .head h3 {
@@ -91,8 +195,6 @@ body {
 
 .contact form {
   padding: 30px;
-  width: 620px;
-  background-color: transparent;
 }
 
 .contact form label {
@@ -126,7 +228,7 @@ body {
   margin: auto;
   padding: 18px;
   letter-spacing: 1px;
-  background: #00184f;
+  background: #ffc107;
   color: #fefefe;
   border: none;
   border-radius: 40px;
@@ -148,5 +250,27 @@ body {
 
 ::-webkit-input-placeholder {
   color: #d9d5d6;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 10px;
+  }
+  .col-md-6,
+  .col-md-4 {
+    width: 100%;
+  }
+  .my-5 {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .py-5 {
+    padding-top: 0 !important;
+    padding-bottom: 20px !important;
+  }
+  .contact {
+    width: auto;
+    margin: 20px auto;
+  }
 }
 </style>

@@ -22,22 +22,43 @@
           },
           onHover: {
             enable: true,
-            mode: 'repulse',
+            mode: 'grab',
+            parallax: {
+              enable: true,
+              force: 60,
+              smooth: 100,
+            },
           },
         },
         modes: {
           bubble: {
             distance: 400,
             duration: 2,
+            mix: false,
             opacity: 0.8,
             size: 40,
+          },
+          grab: {
+            distance: 400,
+            links: {
+              blink: false,
+              consent: false,
+              opacity: 1,
+            },
           },
           push: {
             quantity: 4,
           },
+          remove: {
+            quantity: 2,
+          },
           repulse: {
             distance: 200,
             duration: 0.4,
+            factor: 100,
+            speed: 1,
+            maxSpeed: 50,
+            easing: ease - out - quad,
           },
         },
       },
@@ -64,7 +85,7 @@
           density: {
             enable: true,
           },
-          value: 180,
+          value: 220,
         },
         opacity: {
           value: 0.5,
