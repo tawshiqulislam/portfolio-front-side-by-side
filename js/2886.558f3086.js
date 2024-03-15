@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[2886],{2886:function(t,n,o){function e(t){const{context:n,particle:o,radius:e}=t,r=o.shapeData,a=0;n.moveTo(-e,a),n.lineTo(e,a),n.lineCap=r?.cap??"butt"}o.d(n,{LineDrawer:function(){return a}});const r=1;class a{draw(t){e(t)}getSidesCount(){return r}}}}]);
+//# sourceMappingURL=2886.558f3086.js.map

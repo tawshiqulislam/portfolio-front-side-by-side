@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[4366],{4366:function(t,n,a){async function e(t,n=!0){await t.addParticleUpdater("tilt",(async t=>{const{TiltUpdater:n}=await a.e(5840).then(a.bind(a,5840));return new n(t)}),n)}a.d(n,{loadTiltUpdater:function(){return e}})}}]);
+//# sourceMappingURL=4366.c87b0737.js.map

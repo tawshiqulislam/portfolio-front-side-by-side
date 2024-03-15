@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[6108],{6108:function(e,t,a){async function n(e,t=!0){if(!e.emitterShapeManager){const{ShapeManager:t}=await a.e(1666).then(a.bind(a,1666));e.emitterShapeManager=new t(e)}e.addEmitterShapeGenerator||(e.addEmitterShapeGenerator=(t,a)=>{e.emitterShapeManager?.addShapeGenerator(t,a)});const{EmittersPlugin:n}=await a.e(178).then(a.bind(a,178)),r=new n(e);await e.addPlugin(r,t)}a.d(t,{loadEmittersPlugin:function(){return n}})}}]);
+//# sourceMappingURL=6108.3e6a355a.js.map

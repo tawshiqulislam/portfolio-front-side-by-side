@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[1455],{1455:function(t,n,o){o.d(n,{SquareDrawer:function(){return f}});const r=2,e=Math.sqrt(r),s=2;function c(t){const{context:n,radius:o}=t,r=o/e,c=r*s;n.rect(-r,-r,c,c)}const u=4;class f{draw(t){c(t)}getSidesCount(){return u}}}}]);
+//# sourceMappingURL=1455.01b28f1e.js.map
