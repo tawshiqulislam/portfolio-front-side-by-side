@@ -1,164 +1,166 @@
 <template>
-  <div :class="animationClass" @click="toggleAnimation" class="animate-class">
-    <vue-particles
-      id="tsparticles"
-      @particles-loaded="particlesLoaded"
-      :options="{
-        background: {
-          color: {
-            value: 'transparent',
+  <vue-particles
+    id="tsparticles"
+    @particles-loaded="particlesLoaded"
+    :options="{
+      background: {
+        color: {
+          value: 'transparent',
+        },
+      },
+      fullScreen: {
+        enable: true,
+        zIndex: -1,
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: 'push',
+          },
+          onHover: {
+            enable: true,
+            mode: 'grab',
+            parallax: {
+              enable: true,
+              force: 60,
+              smooth: 100,
+            },
           },
         },
-        fullScreen: {
+        modes: {
+          bubble: {
+            distance: 400,
+            duration: 2,
+            mix: false,
+            opacity: 0.8,
+            size: 40,
+          },
+          grab: {
+            distance: 400,
+            links: {
+              blink: false,
+              consent: false,
+              opacity: 1,
+            },
+          },
+          push: {
+            quantity: 4,
+          },
+          remove: {
+            quantity: 2,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+            factor: 100,
+            speed: 1,
+            maxSpeed: 50,
+            easing: ease - out - quad,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: '#ffffff',
+        },
+        links: {
+          color: '#ffffff',
+          distance: 150,
           enable: true,
-          zIndex: -1,
+          opacity: 0.5,
+          width: 1,
         },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: true,
-              mode: 'push',
-            },
-            onHover: {
-              enable: true,
-              mode: 'grab',
-              parallax: {
-                enable: true,
-                force: 60,
-                smooth: 100,
-              },
-            },
-          },
-          modes: {
-            bubble: {
-              distance: 400,
-              duration: 2,
-              mix: false,
-              opacity: 0.8,
-              size: 40,
-            },
-            grab: {
-              distance: 400,
-              links: {
-                blink: false,
-                consent: false,
-                opacity: 1,
-              },
-            },
-            push: {
-              quantity: 4,
-            },
-            remove: {
-              quantity: 2,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-              factor: 100,
-              speed: 1,
-              maxSpeed: 50,
-              easing: ease - out - quad,
-            },
-          },
+        move: {
+          direction: 'none',
+          enable: true,
+          outModes: 'bounce',
+          random: false,
+          speed: 6,
+          straight: false,
         },
-        particles: {
-          color: {
-            value: '#ffffff',
-          },
-          links: {
-            color: '#ffffff',
-            distance: 150,
+        number: {
+          density: {
             enable: true,
-            opacity: 0.5,
-            width: 1,
           },
-          move: {
-            direction: 'none',
-            enable: true,
-            outModes: 'bounce',
-            random: false,
-            speed: 6,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-            },
-            value: 220,
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: 'square',
-          },
-          size: {
-            value: { min: 1, max: 5 },
-          },
+          value: 220,
         },
-        detectRetina: true,
-      }"
-    />
-    <div class="container">
-      <div class="row d-flex justify-content-around mt-2">
-        <div class="col-md-12 text-right text-white">
-          <h1 class="text-warning">About</h1>
-          <h3 class="text-white">Learn More About Me</h3>
-        </div>
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: 'square',
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }"
+  />
+  <div
+    class="container animate-class"
+    :class="animationClass"
+    @click="toggleAnimation"
+  >
+    <div class="row d-flex justify-content-around mt-2">
+      <div class="col-md-12 text-right text-white">
+        <h1 class="text-warning">About</h1>
+        <h3 class="text-white">Learn More About Me</h3>
       </div>
-      <div class="row d-flex justify-content-around pb-2">
-        <div
-          class="img-box position-relative col-md-4 mt-2 mx-2 d-flex justify-content-center align-items-center"
-        >
-          <img :src="userData.authorImg" :alt="userData.authorName" />
-          <div class="img-box-outline"></div>
-        </div>
-        <div
-          class="about-box col-md-7 mx-2 mt-2 d-flex justify-content-start align-items-center"
-        >
-          <div class="card-body bg-transparent">
-            <span class="h4">Hello! Once Again</span>
-            <h2 class="card-title">
-              <span class="name">{{ userData.authorName }}</span>
-            </h2>
-            <div v-for="msg in userData.homeMsg" :key="msg">
-              <p class="card-text my-3">
-                <small
-                  ><b>{{ msg }}</b></small
-                >
+    </div>
+    <div class="row d-flex justify-content-around pb-2">
+      <div
+        class="img-box position-relative col-md-4 mt-2 mx-2 d-flex justify-content-center align-items-center"
+      >
+        <img :src="userData.authorImg" :alt="userData.authorName" />
+        <div class="img-box-outline"></div>
+      </div>
+      <div
+        class="about-box col-md-7 mx-2 mt-2 d-flex justify-content-start align-items-center"
+      >
+        <div class="card-body bg-transparent">
+          <span class="h4">Hello! Once Again</span>
+          <h2 class="card-title">
+            <span class="name">{{ userData.authorName }}</span>
+          </h2>
+          <div v-for="msg in userData.homeMsg" :key="msg">
+            <p class="card-text my-3">
+              <small
+                ><b>{{ msg }}</b></small
+              >
+            </p>
+          </div>
+          <div class="button d-flex justify-content-start">
+            <a href="#" class="btn btn-outline-warning rounded-pill py-2 px-4"
+              >Contact Now</a
+            >
+          </div>
+          <div class="footer-button-section my-4">
+            <div
+              class="col-md-3 badge bg-warning text-black footer-button mx-2 my-1"
+            >
+              <p class="text-start">
+                <span class="h5">{{ userProfile.exp }}+</span><br />
+                Experience
               </p>
             </div>
-            <div class="button d-flex justify-content-start">
-              <a href="#" class="btn btn-outline-warning rounded-pill py-2 px-4"
-                >Contact Now</a
-              >
+            <div
+              class="col-md-3 badge bg-light text-black footer-button mx-2 my-1"
+            >
+              <p class="text-start">
+                <span class="h5">{{ userProfile.project }}+</span><br />
+                Projects
+              </p>
             </div>
-            <div class="footer-button-section my-4">
-              <div
-                class="col-md-3 badge bg-warning text-black footer-button mx-2 my-1"
-              >
-                <p class="text-start">
-                  <span class="h5">{{ userProfile.exp }}+</span><br />
-                  Experience
-                </p>
-              </div>
-              <div
-                class="col-md-3 badge bg-light text-black footer-button mx-2 my-1"
-              >
-                <p class="text-start">
-                  <span class="h5">{{ userProfile.project }}+</span><br />
-                  Projects
-                </p>
-              </div>
-              <div
-                class="col-md-3 badge bg-transparent footer-button fbtn-last mx-2 my-1"
-              >
-                <p class="text-start">
-                  <span class="h5">{{ userProfile.client }}+</span><br />
-                  Happy Clients
-                </p>
-              </div>
+            <div
+              class="col-md-3 badge bg-transparent footer-button fbtn-last mx-2 my-1"
+            >
+              <p class="text-start">
+                <span class="h5">{{ userProfile.client }}+</span><br />
+                Happy Clients
+              </p>
             </div>
           </div>
         </div>
@@ -188,17 +190,7 @@ export default {
       },
     };
   },
-  computed: {
-    animationClass() {
-      return {
-        "animate-class": this.isAnimating,
-      };
-    },
-  },
   methods: {
-    toggleAnimation() {
-      this.isAnimating = !this.isAnimating;
-    },
     particlesLoaded() {
       // console.log("Particles container loaded", container);
     },

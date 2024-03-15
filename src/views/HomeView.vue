@@ -101,7 +101,11 @@
     }"
   />
 
-  <div class="container mt-5">
+  <div
+    class="container mt-5 animate-class"
+    :class="animationClass"
+    @click="toggleAnimation"
+  >
     <div class="row d-flex justify-content-around pb-2">
       <div
         class="about-box col-md-6 mx-2 mt-3 d-flex justify-content-start align-items-center"

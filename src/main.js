@@ -18,6 +18,21 @@ app.use(router);
 // Mount the app to the DOM element with the id 'app'
 app.mount("#app");
 
+app.mixin({
+  computed: {
+    animationClass() {
+      return {
+        "animate-class": this.isAnimating,
+      };
+    },
+  },
+  methods: {
+    toggleAnimation() {
+      this.isAnimating = !this.isAnimating;
+    },
+  },
+});
+
 // Initialize Particles plugin
 app.use(Particles, {
   init: async (engine) => {

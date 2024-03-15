@@ -78,7 +78,11 @@
       detectRetina: true,
     }"
   />
-  <div class="container">
+  <div
+    class="container animate-class"
+    :class="animationClass"
+    @click="toggleAnimation"
+  >
     <div class="row d-flex justify-content-around">
       <div class="col-md-6">
         <div class="contact">

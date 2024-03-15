@@ -100,7 +100,11 @@
     }"
   />
 
-  <div class="container mt-2 text-white">
+  <div
+    class="container mt-2 text-white animate-class"
+    :class="animationClass"
+    @click="toggleAnimation"
+  >
     <div class="row d-flex justify-content-around">
       <div class="col-md-12 text-right text-white">
         <h1 class="text-warning">Blogs</h1>
