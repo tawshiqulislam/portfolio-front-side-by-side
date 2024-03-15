@@ -128,7 +128,7 @@
       >
         <img :src="userData.authorImg" :alt="userData.authorName" />
       </div>
-      <div class="col-md-1 d-flex links text-center">
+      <div class="col-md-1 d-flex url-links follow-me text-center">
         <div class="col mt-5">
           <a class="btn btn-floating m-1" href="#!" role="button"
             ><i class="bi bi-facebook text-warning"></i
@@ -173,41 +173,33 @@
     </div>
   </div>
 
-  <footer class="text-center text-white">
+  <footer
+    class="text-center text-white"
+    style="position: absolute; bottom: 0; width: 100%; height: 60px"
+  >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
+      <!-- <section class="mb-4">
         <a class="btn btn-floating m-1" href="#!" role="button"
           ><i class="bi bi-facebook"></i
         ></a>
-
-        <!-- Twitter -->
         <a class="btn btn-floating m-1" href="#!" role="button"
           ><i class="bi bi-github"></i
         ></a>
-
-        <!-- Google -->
         <a class="btn btn-floating m-1" href="#!" role="button"
           ><i class="bi bi-linkedin"></i
         ></a>
-
-        <!-- Instagram -->
         <a class="btn btn-floating m-1" href="#!" role="button"
           ><i class="bi bi-instagram"></i
         ></a>
-
-        <!-- Linkedin -->
         <a class="btn btn-floating m-1" href="#!" role="button"
           ><i class="bi bi-twitter"></i
         ></a>
-
-        <!-- Github -->
         <a class="btn btn-floating m-1" href="#!" role="button"
           ><i class="bi bi-behance"></i
         ></a>
-      </section>
+      </section> -->
 
       <div
         class="justify-content-center"
@@ -249,11 +241,6 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 768px) {
-  .links .follow-me {
-    display: none;
-  }
-}
 .about-box {
   border-radius: 10px;
   padding: 20px;
@@ -306,5 +293,11 @@ footer > .container > section > a {
 }
 footer > .container > section > a:hover {
   color: rgb(255, 238, 0);
+}
+
+@media (max-width: 775px) {
+  .url-links .follow-me {
+    display: none !important; /* Use !important if needed */
+  }
 }
 </style>
