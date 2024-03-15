@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[4481],{4481:function(n,t,i){i.d(t,{LinksPlugin:function(){return s}});class s{constructor(){this.id="links"}async getPlugin(n){const{LinkInstance:t}=await i.e(6958).then(i.bind(i,6958));return new t(n)}loadOptions(){}needsPlugin(){return!0}}}}]);
+//# sourceMappingURL=4481.554a75c0.js.map

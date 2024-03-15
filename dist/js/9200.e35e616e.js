@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[9200],{9200:function(t,n,e){e.d(n,{Pauser:function(){return o}});var s=e(5811);const r="pause";class o extends s.sJ{constructor(t){super(t),this.handleClickMode=t=>{if(t!==r)return;const n=this.container;n.animationStatus?n.pause():n.play()}}clear(){}init(){}interact(){}isEnabled(){return!0}reset(){}}}}]);
+//# sourceMappingURL=9200.e35e616e.js.map

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[5734],{5734:function(e,t,r){async function n(e,t=!0){const n=e,{EmittersSquareShapeGenerator:a}=await r.e(37).then(r.bind(r,37));n.addEmitterShapeGenerator?.("square",new a),await n.refresh(t)}r.d(t,{loadEmittersShapeSquare:function(){return n}})}}]);
+//# sourceMappingURL=5734.00334eff.js.map
