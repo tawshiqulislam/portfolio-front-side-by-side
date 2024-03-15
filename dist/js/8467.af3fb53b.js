@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[8467],{8467:function(n,e,t){async function o(n,e=!0){const{LineDrawer:o}=await t.e(2886).then(t.bind(t,2886));await n.addShape("line",new o,e)}t.d(e,{loadLineShape:function(){return o}})}}]);
-//# sourceMappingURL=8467.af3fb53b.js.map

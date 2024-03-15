@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[4631],{4631:function(t,n,e){async function a(t,n=!0){await t.addParticleUpdater("life",(async t=>{const{LifeUpdater:n}=await e.e(3091).then(e.bind(e,3091));return new n(t)}),n)}e.d(n,{loadLifeUpdater:function(){return a}})}}]);
-//# sourceMappingURL=4631.3b12d5ae.js.map
