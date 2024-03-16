@@ -133,9 +133,6 @@
                 {{ project.description }}
               </p>
             </div>
-            <div class="blog-article text-start mx-2" style="overflow: hidden">
-              <a href="" class="text-justify" style="font-size: 40%"> Click </a>
-            </div>
             <div class="tags text-start mx-2 mb-4">
               <span
                 class="badge bg-transparent mx-1 fs-val"
@@ -144,6 +141,11 @@
                 >{{ tag }}</span
               >
             </div>
+          </div>
+          <div v-show="project.links" class="text-center w-100 bg-banger">
+            <a href="" class="btn btn-sm btn-outline-warning text-info mb-2"
+              >Project Url</a
+            >
           </div>
         </div>
       </Slide>
@@ -214,9 +216,9 @@ export default defineComponent({
         image: pixel,
         category: "E-commerce Website",
         description:
-          "Developed a task management dashboard for a remote team. Implemented features like task assignment, progress tracking, and team collaboration tools.",
-        links: "",
-        tags: ["#task", "#management"],
+          "This was a big project, and I had to work with the team on it. I did problem solving and new feature addition; it was a Laravel 6 project. A CMS-type laravel e-commerce site with an REST API.",
+        links: "https://shojonsl.com/",
+        tags: ["#backend_development", "#problem_solving"],
       },
       {
         id: 2,
@@ -232,12 +234,13 @@ export default defineComponent({
         category: "E-Commerce Website",
         description:
           " Developed a responsive e-commerce platform for a fashion retail brand. Implemented secure payment gateways, user-friendly product filtering, and inventory management system.",
+        links: "https://khoshrozltd.com/",
         tags: ["#e-commerce", "#marketplace"],
       },
       {
         id: 4,
         image: fresh,
-        category: "Refresh Painting",
+        category: "ERP",
         description:
           " User can take different services as their need, track status of their taken services, see all order history, pay online through credit card. Admin can add new service and delete service that no longer available.",
         tags: ["#react", "#nodeJS", "#expressJS"],
