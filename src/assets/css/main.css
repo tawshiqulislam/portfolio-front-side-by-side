@@ -11,15 +11,15 @@ body {
   /* background-image: url("https://i.pinimg.com/originals/4e/d9/3a/4ed93a925416e114dd4f9657e9121c1b.jpg"); */
   background-image: url("https://images.pexels.com/photos/12732220/pexels-photo-12732220.jpeg");
 
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y; /* Repeat vertically */
+  background-size: cover; /* Cover the entire viewport */
     font-family: 'Merriweather', serif;
     font-family: 'Roboto Slab', serif;
+}
+
+html, body{
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .animate-class {
@@ -99,7 +99,7 @@ nav, footer{
 }
 
 .carousel__prev {
-    left: -9% !important;
+    /* left: -9% !important; */
     border-radius: 0 10px 10px 0 !important;
     -webkit-border-radius: 0 10px 10px 0 !important;
     -moz-border-radius: 0 10px 10px 0 !important;
@@ -108,7 +108,7 @@ nav, footer{
 }
 
 .carousel__next {
-    right: -9% !important;
+    /* right: -9% !important; */
     border-radius: 10px 0 0 10px !important;
     -webkit-border-radius: 10px 0 0 10px !important;
     -moz-border-radius: 10px 0 0 10px !important;
@@ -118,7 +118,7 @@ nav, footer{
 
 @media screen and (max-width: 1120px) {
     .carousel__prev {
-        left: -4% !important;
+        /* left: -4% !important; */
         border-radius: 0 10px 10px 0 !important;
         -webkit-border-radius: 0 10px 10px 0 !important;
         -moz-border-radius: 0 10px 10px 0 !important;
@@ -127,7 +127,7 @@ nav, footer{
     }
     
     .carousel__next {
-        right: -40px !important;
+        /* right: -40px !important; */
         border-radius: 10px 0 0 10px !important;
         -webkit-border-radius: 10px 0 0 10px !important;
         -moz-border-radius: 10px 0 0 10px !important;

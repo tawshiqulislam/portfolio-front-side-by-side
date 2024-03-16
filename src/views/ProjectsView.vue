@@ -133,6 +133,9 @@
                 {{ project.description }}
               </p>
             </div>
+            <div class="blog-article text-start mx-2" style="overflow: hidden">
+              <a href="" class="text-justify" style="font-size: 40%"> Click </a>
+            </div>
             <div class="tags text-start mx-2 mb-4">
               <span
                 class="badge bg-transparent mx-1 fs-val"
@@ -209,9 +212,10 @@ export default defineComponent({
       {
         id: 1,
         image: pixel,
-        category: "Task Management Dashboard",
+        category: "E-commerce Website",
         description:
           "Developed a task management dashboard for a remote team. Implemented features like task assignment, progress tracking, and team collaboration tools.",
+        links: "",
         tags: ["#task", "#management"],
       },
       {

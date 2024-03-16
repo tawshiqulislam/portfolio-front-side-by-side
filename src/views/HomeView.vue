@@ -177,10 +177,7 @@
     </div>
   </div>
 
-  <footer
-    class="text-center text-white"
-    style="position: absolute; bottom: 0; width: 100%; height: 60px"
-  >
+  <footer class="text-center footer text-white">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
@@ -298,10 +295,18 @@ footer > .container > section > a {
 footer > .container > section > a:hover {
   color: rgb(255, 238, 0);
 }
-
 @media (max-width: 775px) {
   .url-links .follow-me {
     display: none !important; /* Use !important if needed */
+  }
+}
+@media (min-width: 780px) {
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
   }
 }
 </style>

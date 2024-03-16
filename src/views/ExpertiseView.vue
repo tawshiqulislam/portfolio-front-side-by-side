@@ -148,7 +148,7 @@
 
       <template #addons>
         <Navigation />
-        <Pagination />
+        <!-- <Pagination /> -->
       </template>
     </Carousel>
   </div>
@@ -156,7 +156,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
+import { Carousel, Navigation, Slide } from "vue3-carousel";
 
 import "vue3-carousel/dist/carousel.css";
 
@@ -165,7 +165,6 @@ export default defineComponent({
   components: {
     Carousel,
     Slide,
-    Pagination,
     Navigation,
   },
   methods: {
@@ -222,57 +221,46 @@ export default defineComponent({
     skills: [
       {
         id: 1,
-        title: "Web",
+        title: "Front End Developemt",
         mySkill: [
-          { html: 10 },
-          { CSS: 10 },
-          { JavaScript: 10 },
-          { html: 10 },
-          { php: 10 },
+          { html: 90 },
+          { CSS: 90 },
+          { "JavaScript & jQuery": 80 },
+          { Bootstrap: 100 },
+          { VueJS: 70 },
         ],
       },
       {
         id: 2,
-        title: "Programming",
+        title: "Backend Development",
         mySkill: [
-          { html: 20 },
-          { CSS: 20 },
-          { JavaScript: 20 },
-          { html: 20 },
-          { php: 20 },
+          { PHP: 80 },
+          { Laravel: 90 },
+          { MySQL: 70 },
+          { "Rest API": 80 },
+          { "XAMP/WAMP/cPanel/Cloud Hosting": 90 },
         ],
       },
       {
         id: 3,
-        title: "Android",
+        title: "Programming",
         mySkill: [
-          { html: 30 },
-          { CSS: 30 },
-          { JavaScript: 30 },
-          { html: 30 },
-          { php: 30 },
+          { PHP: 80 },
+          { "C/C++": 90 },
+          { Python: 70 },
+          { Java: 60 },
+          { JavaScript: 80 },
         ],
       },
       {
         id: 4,
         title: "Others",
         mySkill: [
-          { html: 40 },
-          { CSS: 40 },
-          { JavaScript: 40 },
-          { html: 40 },
-          { php: 40 },
-        ],
-      },
-      {
-        id: 5,
-        title: "None",
-        mySkill: [
-          { html: 50 },
-          { CSS: 50 },
-          { JavaScript: 50 },
-          { html: 30 },
-          { php: 50 },
+          { "Linux OS": 70 },
+          { "Software Architecture": 80 },
+          { "Software Quality Assurance": 80 },
+          { "Team Management": 90 },
+          { "Team Leading": 80 },
         ],
       },
     ],
