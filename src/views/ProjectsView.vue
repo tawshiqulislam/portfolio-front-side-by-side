@@ -159,12 +159,14 @@
 </template>
 
 <script>
-import fly from "../assets/image/portfolio/fly1.85d4f0d6.png";
-import gents from "../assets/image/portfolio/Gents-Glamor.f6c42b83.png";
-import fresh from "../assets/image/portfolio/Refresh-Professional-Painting-Service.ff186da4.png";
-import commerce from "../assets/image/portfolio/006.png";
-import pixel from "../assets/image/portfolio/pexels-tranmautritam-69432.jpg";
-import pixel2 from "../assets/image/portfolio/image26-768x426-1.png";
+import fly from "../assets/image/portfolio/erp.jpg";
+import others from "../assets/image/portfolio/github.jpg";
+import gents from "../assets/image/portfolio/kkml.jpg";
+import fresh from "../assets/image/portfolio/pro_man.jpg";
+import ainsheba from "../assets/image/portfolio/ainsheba.jpg";
+import commerce from "../assets/image/portfolio/e_pushti.jpg";
+import pixel from "../assets/image/portfolio/shojon.jpg";
+import pixel2 from "../assets/image/portfolio/brur.jpg";
 import { defineComponent } from "vue";
 import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 
@@ -216,50 +218,69 @@ export default defineComponent({
         image: pixel,
         category: "E-commerce Website",
         description:
-          "This was a big project, and I had to work with the team on it. I did problem solving and new feature addition; it was a Laravel 6 project. A CMS-type laravel e-commerce site with an REST API.",
+          "I actively contributed to a Laravel 6 project focused on developing a CMS-driven e-commerce platform. My role involved problem-solving and integrating new features to enhance the site's functionality. Additionally, I played a key part in implementing a RESTful API for seamless communication within the system. This experience highlights my proficiency in Laravel development and API integration within the e-commerce domain.",
         links: "https://shojonsl.com/",
         tags: ["#backend_development", "#problem_solving"],
       },
       {
         id: 2,
         image: pixel2,
-        category: "Property Rental App",
+        category: "Institutional Website",
         description:
-          " Created a mobile-responsive property rental application for a real estate agency. Implemented property listing with advanced search filters, integrated online booking and payment systems, and a review system.",
-        tags: ["#Property", "#Rental", "#App"],
+          "I spearheaded both backend and frontend development for a dynamic website, demonstrating expertise in HTML, CSS, and Bootstrap to craft engaging user interfaces. Leveraging my proficiency in REST API and Laravel, I seamlessly integrated backend functionalities, ensuring smooth data flow and efficient operations. With MySQL, I optimized database management for enhanced performance and reliability. My versatile skill set and meticulous approach were instrumental in delivering a polished website that seamlessly blends aesthetics with functionality.",
+        tags: ["educational", "web_design", "backend"],
       },
       {
         id: 3,
         image: commerce,
-        category: "E-Commerce Website",
+        category: "E-learning Platform",
         description:
-          " Developed a responsive e-commerce platform for a fashion retail brand. Implemented secure payment gateways, user-friendly product filtering, and inventory management system.",
-        links: "https://khoshrozltd.com/",
-        tags: ["#e-commerce", "#marketplace"],
+          "As the Software Engineer and Team Lead, I oversaw the development of this project from inception to completion. I was involved in both backend and frontend development, designed the system architecture, and conducted project planning. Leveraging HTML, CSS, Bootstrap, Laravel, and MySQL, I ensured seamless integration of technologies to deliver a robust solution.",
+        links: "https://e-pushti.net/",
+        tags: ["#e-learning", "#educational"],
       },
       {
         id: 4,
         image: fresh,
-        category: "ERP",
+        category: "Project Management Website",
         description:
-          " User can take different services as their need, track status of their taken services, see all order history, pay online through credit card. Admin can add new service and delete service that no longer available.",
-        tags: ["#react", "#nodeJS", "#expressJS"],
+          "In this project, I had dual roles as software engineer and team lead for a project management system designed for a bank, which is their internal system, built using Laravel. My responsibilities encompassed system architecture design, meticulous project planning, and backend development. Through my expertise and leadership, I ensured the successful execution of this critical project.",
+        tags: ["#erp", "#project_management"],
       },
       {
         id: 5,
-        image: gents,
-        category: "Gents Glamor",
+        image: ainsheba,
+        category: "Ain Sheba",
         description:
-          " Calling Cabs is a react app where you can find various types of transport system. We provide services of Family tour, Emergency transport, Goods transportation on reasonable price. This app is easy to use.",
-        tags: ["#React.js", "#NodeJS", "#ExpressJS"],
+          "This was a law project for taking lawyer appointments and law courses. In this project, I had to work on a CodeCanyon project to fulfil the client's needs. Solving programme bugs and adding new features.",
+        links: "https://ainsheba.com/",
+        tags: ["#erp", "#project_management"],
       },
       {
         id: 6,
-        image: fly,
-        category: "Discover Fly",
+        image: gents,
+        category: "E-commerce Book Store",
         description:
-          " User can buy his/her flight tickets. Here some input field like Flying From, Flying To, Departure Date, Return Date(optional), Number of First Class & Economy Class Tickets etc. Than calculate price with vat/tax.",
-        tags: ["#HTML", "#CSS", "#Bootstrap", "#JavaScript"],
+          "In this project, I served as a Senior Web Developer, contributing to the development of a system built on HTML, CSS, Bootstrap, PHP, Laravel, and MySQL. Additionally, I played a key role in integrating the system with the hPanel cloud system and implementing payment gateways. My responsibilities encompassed both frontend and backend development, highlighting my versatility across various technical domains.",
+        links: "https://khoshrozltd.com/",
+        tags: ["#ecommerce", "#book_store"],
+      },
+      {
+        id: 7,
+        image: fly,
+        category: "ERP System (Website)",
+        description:
+          "This was an already-built ERP system on PHP/CodeIgniter. There were several bugs and calculation issues, as well as programming problems and database issues. So I had to work on it continuously to fix the issues and implement future updates.",
+        tags: ["#erp", "#CSS", "#Bootstrap", "#JavaScript"],
+      },
+      {
+        id: 7,
+        image: others,
+        category: "Other Projects",
+        description:
+          "There are bunch of other projects like portfolio, problem solving projects, Starup company projects, CodeCanyon projects, and more.",
+        links: "https://github.com/tawshiqulislam",
+        tags: ["#erp", "#CSS", "#Bootstrap", "#JavaScript"],
       },
     ],
   }),

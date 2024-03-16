@@ -119,8 +119,15 @@
             {{ userData.homeMsg }}
           </p>
           <div class="button d-flex justify-content-start">
-            <a href="#" class="btn btn-warning rounded-pill">Get Resume</a>
-            <a href="#" class="btn btn-outline-warning rounded-pill mx-5"
+            <a
+              :href="userData.authorPdf"
+              download="Resume.pdf"
+              class="btn btn-warning rounded-pill"
+              >Get Resume</a
+            >
+            <a
+              href="mailto:tawshiq.rafi02@gmail.com"
+              class="btn btn-outline-warning rounded-pill mx-5"
               >Let's Talk</a
             >
           </div>
@@ -133,34 +140,28 @@
         <img :src="userData.authorImg" :alt="userData.authorName" />
       </div>
       <div class="col-md-1 d-flex url-links follow-me text-center">
-        <div class="col mt-5">
-          <a class="btn btn-floating m-1" href="#!" role="button"
+        <div class="col mt-5" style="margin-top: 160px !important">
+          <a
+            class="btn btn-floating m-1"
+            href="https://www.facebook.com/tawshiqulislam.rafi.3"
+            role="button"
             ><i class="bi bi-facebook text-warning"></i
           ></a>
 
           <!-- Twitter -->
-          <a class="btn btn-floating m-1" href="#!" role="button"
+          <a
+            class="btn btn-floating m-1"
+            href="https://github.com/tawshiqulislam"
+            role="button"
             ><i class="bi bi-github text-warning"></i
           ></a>
 
           <!-- Google -->
-          <a class="btn btn-floating m-1" href="#!" role="button"
+          <a
+            class="btn btn-floating m-1"
+            href="https://www.linkedin.com/in/tawshiqul-islam-rafi-417b501b9/"
+            role="button"
             ><i class="bi bi-linkedin text-warning"></i
-          ></a>
-
-          <!-- Instagram -->
-          <a class="btn btn-floating m-1" href="#!" role="button"
-            ><i class="bi bi-instagram text-warning"></i
-          ></a>
-
-          <!-- Linkedin -->
-          <a class="btn btn-floating m-1" href="#!" role="button"
-            ><i class="bi bi-twitter text-warning"></i
-          ></a>
-
-          <!-- Github -->
-          <a class="btn btn-floating m-1" href="#!" role="button"
-            ><i class="bi bi-behance text-warning"></i
           ></a>
         </div>
         <div
@@ -222,6 +223,7 @@
 
 <script>
 import author from "../assets/image/author-image-home.png";
+import pdf from "../assets/image/Md-Tawshiqul-Islam-Rafi.pdf";
 export default {
   data() {
     return {
@@ -230,6 +232,7 @@ export default {
         homeMsg:
           " As a passionate full-stack web developer with a knack for creating stunning and functional websites. Have a strong foundation in both front-end and back-end development, I bring a holistic approach to every project I undertake.",
         authorImg: author,
+        authorPdf: pdf,
       },
     };
   },

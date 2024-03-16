@@ -83,51 +83,133 @@
     :class="animationClass"
     @click="toggleAnimation"
   >
-    <div class="row d-flex justify-content-around">
-      <div class="col-md-6">
-        <div class="contact">
-          <div class="head">
-            <h1 class="text-white">Get In Touch</h1>
-            <h1 class="text-warning">Would you like to, Say Hello!</h1>
-            <i class="fa fa-comment fa-lg"></i>
+    <div
+      class="container d-flex justify-content-center align-items-center"
+      style="height: 100vh"
+    >
+      <div class="row d-flex justify-content-around">
+        <div class="col-md-6">
+          <div class="contact">
+            <div class="head">
+              <h1 class="text-white">Get In Touch</h1>
+              <h1 class="text-warning">Would you like to, Say Hello!</h1>
+              <i class="fa fa-comment fa-lg"></i>
+            </div>
+            <div
+              class="body d-flex align-items-center justify-content-center"
+              style="height: 100px"
+            >
+              <a
+                href="mailto:tawshiq.rafi02@gmail.com"
+                class="text-center text-info my-5"
+                ><h1>Send An Email Now..!</h1></a
+              >
+            </div>
+
+            <!-- <form>
+          <label>Name</label>
+          <input type="text" />
+          <label>Email</label>
+          <input type="email" />
+          <label>Message</label>
+          <textarea placeholder="Enter Your Message"></textarea>
+          <button type="button">Send Message</button>
+        </form> -->
           </div>
-          <form>
-            <label>Name</label>
-            <input type="text" />
-            <label>Email</label>
-            <input type="email" />
-            <label>Message</label>
-            <textarea placeholder="Enter Your Message"></textarea>
-            <button type="button">Send Message</button>
-          </form>
+          <div class="text-center">
+            <a
+              class="btn btn-floating m-1"
+              href="https://www.facebook.com/tawshiqulislam.rafi.3"
+              role="button"
+              ><i class="bi bi-facebook text-warning"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-floating m-1"
+              href="https://github.com/tawshiqulislam"
+              role="button"
+              ><i class="bi bi-github text-warning"></i
+            ></a>
+
+            <!-- Google -->
+            <a
+              class="btn btn-floating m-1"
+              href="https://www.linkedin.com/in/tawshiqul-islam-rafi-417b501b9/"
+              role="button"
+              ><i class="bi bi-linkedin text-warning"></i
+            ></a>
+          </div>
+          <footer class="text-center footer text-white">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+              <!-- Section: Social media -->
+              <!-- <section class="mb-4">
+        <a class="btn btn-floating m-1" href="#!" role="button"
+          ><i class="bi bi-facebook"></i
+        ></a>
+        <a class="btn btn-floating m-1" href="#!" role="button"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a class="btn btn-floating m-1" href="#!" role="button"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a class="btn btn-floating m-1" href="#!" role="button"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a class="btn btn-floating m-1" href="#!" role="button"
+          ><i class="bi bi-twitter"></i
+        ></a>
+        <a class="btn btn-floating m-1" href="#!" role="button"
+          ><i class="bi bi-behance"></i
+        ></a>
+      </section> -->
+
+              <div class="justify-content-center" style="bottom: 0">
+                <span
+                  >&copy; Developed By
+                  <a href="mailto:tawshiq.rafi02@gmail.com" class="text-white"
+                    >Tawshiqul Islam</a
+                  ></span
+                >
+              </div>
+
+              <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+          </footer>
         </div>
-      </div>
-      <div class="col-md-4 py-5" style="margin-left: 50px !important">
-        <p class="text-warning h1">Would You Like To</p>
-        <p class="text-info h2">Get A Free Consaltancy</p>
-        <p class="text-white mt-3">
-          I'm excited to discuss your web development needs. So, I offer free
-          consultancy to help you navigate through the process. Whether you need
-          advice on technology choices, project planning, or overall strategy.
-          <br />
-          Also, I like to talk about<br />
-        </p>
-        <ul class="mt-3 text-warning">
-          <li>different ideas,</li>
-          <li>future project planning,</li>
-          <li>system architecture,</li>
-          <li>planning about start-ups,</li>
-          <li>discussion about solving problem,</li>
-          <li>and new ways to acquire markets.</li>
-        </ul>
-        <p class="text-white mt-3">
-          Let's have a discussion and bring up some new ideas.
-          <br />
-          Let's collaborate and bring your web ideas to life!
-        </p>
-        <button class="btn btn-outline-info border rounded-pill">
-          Make A Call For Meeting
-        </button>
+        <div class="col-md-4 py-5" style="margin-left: 50px !important">
+          <p class="text-warning h1">Would You Like To</p>
+          <p class="text-info h2">Get A Free Consaltancy</p>
+          <p class="text-white mt-3">
+            I'm excited to discuss your web development needs. So, I offer free
+            consultancy to help you navigate through the process. Whether you
+            need advice on technology choices, project planning, or overall
+            strategy.
+            <br />
+            Also, I like to talk about<br />
+          </p>
+          <ul class="mt-3 text-warning">
+            <li>different ideas,</li>
+            <li>future project planning,</li>
+            <li>system architecture,</li>
+            <li>planning about start-ups,</li>
+            <li>discussion about solving problem,</li>
+            <li>and new ways to acquire markets.</li>
+          </ul>
+          <p class="text-white mt-3">
+            Let's have a discussion and bring up some new ideas.
+            <br />
+            Let's collaborate and bring your web ideas to life!
+          </p>
+          <button
+            class="btn btn-outline-info border rounded-pill"
+            href="mailto:tawshiq.rafi02@gmail.com"
+          >
+            Make A Call For Meeting
+          </button>
+        </div>
       </div>
     </div>
   </div>

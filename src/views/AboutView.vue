@@ -133,7 +133,9 @@
             </p>
           </div>
           <div class="button d-flex justify-content-start">
-            <a href="#" class="btn btn-outline-warning rounded-pill py-2 px-4"
+            <a
+              href="mailto:tawshiq.rafi02@gmail.com"
+              class="btn btn-outline-warning rounded-pill py-2 px-4"
               >Contact Now</a
             >
           </div>
