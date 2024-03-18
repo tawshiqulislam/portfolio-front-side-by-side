@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkprotfolio_front_1"]=self["webpackChunkprotfolio_front_1"]||[]).push([[9706],{9706:function(t,n,o){async function a(t,n=!0){await t.addParticleUpdater("roll",(async()=>{const{RollUpdater:t}=await o.e(9659).then(o.bind(o,9659));return new t}),n)}o.d(n,{loadRollUpdater:function(){return a}})}}]);
-//# sourceMappingURL=9706.b40575da.js.map

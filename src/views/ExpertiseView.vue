@@ -117,7 +117,7 @@
         </p>
       </div>
     </div>
-    <Carousel v-bind="settings" :breakpoints="breakpoints">
+    <Carousel v-bind="settings" :breakpoints="breakpoints" infinite>
       <Slide v-for="skill in skills" :key="skill">
         <div class="carousel__item my-card mt-3" style="display: block">
           <div

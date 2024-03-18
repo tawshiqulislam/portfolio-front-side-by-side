@@ -112,7 +112,7 @@
       </div>
     </div>
 
-    <Carousel v-bind="settings" :breakpoints="breakpoints">
+    <Carousel v-bind="settings" :breakpoints="breakpoints" infinite>
       <Slide v-for="blog in blogs" :key="blog.id">
         <div class="carousel__item d-flex flex-column my-card mt-2">
           <div class="top mb-3">

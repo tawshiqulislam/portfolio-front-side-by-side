@@ -111,7 +111,7 @@
         <h3 class="text-white">MY RECENT WORK</h3>
       </div>
     </div>
-    <Carousel v-bind="settings" :breakpoints="breakpoints">
+    <Carousel v-bind="settings" :breakpoints="breakpoints" infinite>
       <Slide v-for="project in projects" :key="project">
         <div class="carousel__item d-flex flex-column my-card mt-2">
           <div class="top mb-3">
