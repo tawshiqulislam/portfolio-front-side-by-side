@@ -180,8 +180,8 @@ export default {
       userData: {
         authorName: "Md. Tawshiqul Islam Rafi",
         homeMsg: [
-          "From an early age, I was drawn to the world of technology and design. This fascination led me to pursue a career in web development and upcoming technology. With a strong foundation in front-end development, I possess expertise in HTML, CSS, and JavaScript. On the back end, I'm proficient in languages and frameworks such as PHP, Laravel, Ruby on Rails basic, Java basic, Python basic, and others. I am willing to learn more and want to explore.",
-          "Beyond web development, I have a fervent passion for exploring the realms of data science and other cutting-edge technologies. Although my expertise lies primarily in web development, I am deeply interested in delving into the world of data science. I am eager to embark on a project in this field.",
+          "From an early age, I was drawn to the world of technology and design. This fascination led me to pursue a career in web development and upcoming technology. With a strong foundation in front-end development, I possess expertise in HTML, CSS, and JavaScript. On the back end, I'm proficient in languages and frameworks such as PHP, Laravel, Ruby on Rails basic, Java basic, Python basic, and others. I am passionate about learning and exploring new technologies.",
+          "In addition to web development, I have a keen interest in data science and other cutting-edge technologies. While my expertise lies primarily in web development, I am eager to delve into the world of data science and apply my skills to solve complex problems. I am excited about the prospect of working on data-driven projects and contributing to advancements in this field.",
         ],
         authorImg: author,
       },

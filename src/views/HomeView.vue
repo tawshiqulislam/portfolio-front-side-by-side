@@ -230,7 +230,7 @@ export default {
       userData: {
         authorName: "Md. Tawshiqul Islam Rafi",
         homeMsg:
-          " As a passionate full-stack web developer with a knack for creating stunning and functional websites. Have a strong foundation in both front-end and back-end development, I bring a holistic approach to every project I undertake.",
+          "As a passionate full-stack web developer with a keen interest in data science, I have a knack for creating stunning and functional websites. With a strong foundation in both front-end and back-end development, I bring a holistic approach to every project I undertake. I am enthusiastic about exploring various machine learning algorithms and data analysis techniques, leveraging innovative ideas to create impactful solutions.",
         authorImg: author,
         authorPdf: pdf,
       },
