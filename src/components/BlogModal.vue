@@ -17,7 +17,7 @@
     <div class="blog-desc pb-5" v-else>
       {{ blogData.description }}
     </div>
-    <button @click="closeModal">Close</button>
+    <!-- <button @click="closeModal">Close</button> -->
   </div>
 </template>
 
