@@ -143,9 +143,7 @@
             </div>
           </div>
           <div v-show="project.links" class="text-center w-100 bg-banger">
-            <a href="" class="btn btn-sm btn-outline-warning text-info mb-2"
-              >Project Url</a
-            >
+            <a :href="project.links" class="btn btn-sm btn-outline-warning text-info mb-2">Project Url</a>
           </div>
         </div>
       </Slide>
