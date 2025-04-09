@@ -127,7 +127,9 @@
           </h2>
           <div v-for="msg in userData.homeMsg" :key="msg">
             <p class="card-text my-3">
-              {{ msg }}
+              <small
+                ><b>{{ msg }}</b></small
+              >
             </p>
           </div>
           <div class="button d-flex justify-content-start">
@@ -221,9 +223,6 @@ export default {
   padding: 20px;
   margin: 20px;
   color: aliceblue;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  background: #00000052;
 }
 .about-box h2 {
   font-size: 40px;
@@ -232,16 +231,15 @@ export default {
 .about-box h2 .name {
   color: rgb(255, 255, 0);
 }
-.about-box .card-body {
+.about-box > .card-body > .card-text {
+  width: 90%;
+  font-size: medium;
   font-family: "Josefin Sans", sans-serif;
-  color: #fff;
+  font-family: "Merriweather", serif;
 }
-.about-box .card-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
+.about-box > .card-body > .card-text {
   text-align: justify;
 }
-
 .footer-button {
   border-radius: 0px 50px 50px 50px;
   padding: 20px;

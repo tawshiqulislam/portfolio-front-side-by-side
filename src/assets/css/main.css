@@ -27,8 +27,10 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #002235; /* Background color of the preloader */
-  z-index: 9999; /* Make sure preloader appears on top of other content */
+  background-color: #002235;
+  /* Background color of the preloader */
+  z-index: 9999;
+  /* Make sure preloader appears on top of other content */
 }
 
 /* Customize the preloader animation */
@@ -39,21 +41,26 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
-  border: 3px solid #FFBF00; /* Color of the spinner */
+  width: 50px;
+  /* Adjust size as needed */
+  height: 50px;
+  /* Adjust size as needed */
+  border: 3px solid #FFBF00;
+  /* Color of the spinner */
   border-radius: 50%;
   border-top-color: transparent;
   border-right-color: transparent;
-  animation: spin 1s linear infinite; /* Customize animation duration */
+  animation: spin 1s linear infinite;
+  /* Customize animation duration */
 }
 
 @keyframes spin {
   0% {
-      transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
+
   100% {
-      transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -141,46 +148,14 @@ footer {
 
 .carousel__next,
 .carousel__prev {
-  background-color: rgb(255, 238, 0) !important;
-  height: 90px !important;
+  background-color: rgba(0, 183, 255, 0.797) !important;
+  border-radius: 20px !important;
+  color: aliceblue !important;
 }
 
-.carousel__prev {
-  /* left: -9% !important; */
-  border-radius: 0 10px 10px 0 !important;
-  -webkit-border-radius: 0 10px 10px 0 !important;
-  -moz-border-radius: 0 10px 10px 0 !important;
-  -ms-border-radius: 0 10px 10px 0 !important;
-  -o-border-radius: 0 10px 10px 0 !important;
-}
-
-.carousel__next {
-  /* right: -9% !important; */
-  border-radius: 10px 0 0 10px !important;
-  -webkit-border-radius: 10px 0 0 10px !important;
-  -moz-border-radius: 10px 0 0 10px !important;
-  -ms-border-radius: 10px 0 0 10px !important;
-  -o-border-radius: 10px 0 0 10px !important;
-}
-
-@media screen and (max-width: 1120px) {
-  .carousel__prev {
-    /* left: -4% !important; */
-    border-radius: 0 10px 10px 0 !important;
-    -webkit-border-radius: 0 10px 10px 0 !important;
-    -moz-border-radius: 0 10px 10px 0 !important;
-    -ms-border-radius: 0 10px 10px 0 !important;
-    -o-border-radius: 0 10px 10px 0 !important;
-  }
-
-  .carousel__next {
-    /* right: -40px !important; */
-    border-radius: 10px 0 0 10px !important;
-    -webkit-border-radius: 10px 0 0 10px !important;
-    -moz-border-radius: 10px 0 0 10px !important;
-    -ms-border-radius: 10px 0 0 10px !important;
-    -o-border-radius: 10px 0 0 10px !important;
-  }
+.carousel__next:hover,
+.carousel__prev:hover {
+  background-color: #00a6ff71 !important;
 }
 
 .carousel__slide {
@@ -202,7 +177,6 @@ footer {
 .carousel__pagination-button::after {
   height: 12px !important;
   border-radius: 50px !important;
-  background-color: rgb(255, 255, 255) !important;
   -webkit-border-radius: 50px !important;
   -moz-border-radius: 50px !important;
   -ms-border-radius: 50px !important;

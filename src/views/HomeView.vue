@@ -4,30 +4,16 @@
     id="tsparticles"
     @particles-loaded="particlesLoaded"
     :options="{
-      background: {
-        color: {
-          value: 'transparent',
-        },
-      },
-      fullScreen: {
-        enable: true,
-        zIndex: -1,
-      },
+      background: { color: { value: 'transparent' } },
+      fullScreen: { enable: true, zIndex: -1 },
       fpsLimit: 120,
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: 'push',
-          },
+          onClick: { enable: true, mode: 'push' },
           onHover: {
             enable: true,
             mode: 'grab',
-            parallax: {
-              enable: true,
-              force: 60,
-              smooth: 100,
-            },
+            parallax: { enable: true, force: 60, smooth: 100 },
           },
         },
         modes: {
@@ -40,32 +26,22 @@
           },
           grab: {
             distance: 400,
-            links: {
-              blink: false,
-              consent: false,
-              opacity: 1,
-            },
+            links: { blink: false, consent: false, opacity: 1 },
           },
-          push: {
-            quantity: 4,
-          },
-          remove: {
-            quantity: 2,
-          },
+          push: { quantity: 4 },
+          remove: { quantity: 2 },
           repulse: {
             distance: 200,
             duration: 0.4,
             factor: 100,
             speed: 1,
             maxSpeed: 50,
-            easing: ease - out - quad,
+            easing: 'ease-out-quad',
           },
         },
       },
       particles: {
-        color: {
-          value: '#ffffff',
-        },
+        color: { value: '#ffffff' },
         links: {
           color: '#ffffff',
           distance: 150,
@@ -81,21 +57,10 @@
           speed: 6,
           straight: false,
         },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 220,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: 'square',
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
+        number: { density: { enable: true }, value: 220 },
+        opacity: { value: 0.5 },
+        shape: { type: 'square' },
+        size: { value: { min: 1, max: 5 } },
       },
       detectRetina: true,
     }"
@@ -106,18 +71,13 @@
     :class="animationClass"
     @click="toggleAnimation"
   >
-    <div class="row d-flex justify-content-around pb-2">
-      <div
-        class="about-box col-md-6 mx-2 mt-3 d-flex justify-content-start align-items-center"
-      >
-        <div class="card-body bg-transparent">
-          <span class="h3">Hello! I'm</span>
-          <h2 class="card-title">
-            <span class="name h1">{{ userData.authorName }}</span>
-          </h2>
-          <p class="card-text">
-            {{ userData.homeMsg }}
-          </p>
+    <div class="row d-flex justify-content-between align-items-center pb-2">
+      <!-- About Section -->
+      <div class="about-box col-md-6 mx-2 mt-3">
+        <div class="card-body bg-transparent text-white">
+          <h3>Hello! I'm</h3>
+          <h2 class="name h1">{{ userData.authorName }}</h2>
+          <p>{{ userData.homeMsg }}</p>
           <div class="button d-flex justify-content-start">
             <a
               :href="userData.authorPdf"
@@ -133,97 +93,69 @@
           </div>
         </div>
       </div>
+
+      <!-- Author Image Section -->
       <div
         class="img-box col-md-4 mx-2 d-flex justify-content-center align-items-center"
-        style="margin-right: 35px !important"
       >
-        <img :src="userData.authorImg" :alt="userData.authorName" />
+        <img
+          :src="userData.authorImg"
+          :alt="userData.authorName"
+          class="author-img"
+        />
       </div>
-      <div class="col-md-1 d-flex url-links follow-me text-center">
-        <div class="col mt-5" style="margin-top: 160px !important">
+
+      <!-- Social Media Links -->
+      <div
+        class="col-md-1 d-flex flex-column align-items-center follow-me text-center"
+      >
+        <div class="social-icons mt-5">
           <a
             class="btn btn-floating m-1"
             href="https://www.facebook.com/tawshiqulislam.rafi.3"
             role="button"
-            ><i class="bi bi-facebook text-warning"></i
-          ></a>
-
-          <!-- Twitter -->
+          >
+            <i class="bi bi-facebook text-warning"></i>
+          </a>
           <a
             class="btn btn-floating m-1"
             href="https://github.com/tawshiqulislam"
             role="button"
-            ><i class="bi bi-github text-warning"></i
-          ></a>
-
-          <!-- Google -->
+          >
+            <i class="bi bi-github text-warning"></i>
+          </a>
           <a
             class="btn btn-floating m-1"
             href="https://www.linkedin.com/in/tawshiqul-islam-rafi-417b501b9/"
             role="button"
-            ><i class="bi bi-linkedin text-warning"></i
-          ></a>
+          >
+            <i class="bi bi-linkedin text-warning"></i>
+          </a>
         </div>
-        <div
-          class="col follow-me text-white"
-          style="
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            font-weight: 700;
-          "
-        >
-          Follow Me
+        <div class="follow-me-text text-white mt-5">
+          <span>Follow Me</span>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer class="text-center footer text-white">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Social media -->
-      <!-- <section class="mb-4">
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-facebook"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-github"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-linkedin"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-instagram"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-twitter"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-behance"></i
-        ></a>
-      </section> -->
-
-      <div
-        class="justify-content-center"
-        style="display: flex; flex-direction: column"
+    <div class="container p-4">
+      <span
+        >&copy; Developed By
+        <a href="mailto:tawshiq.rafi02@gmail.com" class="text-white"
+          >Tawshiqul Islam</a
+        ></span
       >
-        <span
-          >&copy; Developed By
-          <a href="mailto:tawshiq.rafi02@gmail.com" class="text-white"
-            >Tawshiqul Islam</a
-          ></span
-        >
-      </div>
-
-      <!-- Section: Social media -->
     </div>
-    <!-- Grid container -->
   </footer>
 </template>
 
 <script>
 import author from "../assets/image/author-image-home.png";
 import pdf from "../assets/image/Md-Tawshiqul-Islam-Rafi.pdf";
+
 export default {
   data() {
     return {
@@ -234,82 +166,142 @@ export default {
         authorImg: author,
         authorPdf: pdf,
       },
+      animationClass: "fadeIn", // Example of animation class
     };
   },
   methods: {
     particlesLoaded() {
-      // console.log("Particles container loaded", container);
+      console.log("Particles loaded successfully.");
+    },
+    toggleAnimation() {
+      this.animationClass =
+        this.animationClass === "fadeIn" ? "fadeOut" : "fadeIn";
     },
   },
 };
 </script>
 
 <style scoped>
-.about-box {
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  height: 50vh;
-  color: aliceblue;
+/* General Styles */
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: #1a1a1a;
+  color: #fff;
 }
-.about-box h2 {
-  font-size: 40px;
-  color: rgb(255, 255, 255);
-}
-.about-box h2 .name {
-  color: yellow;
-}
-.about-box > .card-body > .card-text {
-  width: 90%;
-  font-size: medium;
-}
-.about-box > .card-body > .card-text {
-  text-align: justify;
-}
-.img-box > img {
-  height: 380px;
-  width: 320px;
-  --c: #ffe600; /* the border color */
-  --b: 10px; /* the border thickness*/
-  --g: 5px; /* the gap on hover */
 
-  padding: calc(var(--g) + var(--b));
-  --_g: rgba(255, 255, 255, 0) 25%, var(--c) 0;
-  background: conic-gradient(
-        from 180deg at top var(--b) right var(--b),
-        var(--_g)
-      )
-      var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
-    conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0
-      var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
-  transition: 0.3s, background-position 0.3s 0.3s;
-  cursor: pointer;
+/* About Box */
+.about-box {
+  border-radius: 15px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.img-box:hover > img {
-  --_i: 100%;
-  transition: 0.3s, background-size 0.3s 0.3s;
+
+.about-box h2 {
+  font-size: 3rem;
+  font-weight: bold;
 }
-.row {
-  margin-top: 10vh;
+
+.about-box p {
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
-footer > .container > section > a {
-  color: rgb(255, 255, 255);
+
+.about-box .button a {
+  margin: 10px;
 }
-footer > .container > section > a:hover {
-  color: rgb(255, 238, 0);
+
+.about-box .name {
+  color: #ffe600;
 }
-@media (max-width: 775px) {
-  .url-links .follow-me {
-    display: none !important; /* Use !important if needed */
+
+/* Image Box */
+.img-box img {
+  width: 70%;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-box:hover img {
+  transform: scale(1.05);
+}
+
+/* Social Media Buttons */
+.social-icons .btn {
+  background-color: #91aac359;
+  transition: all 0.3s ease;
+}
+
+.social-icons .btn:hover {
+  background-color: #00a6ff71;
+  transform: scale(1.1) !important;
+}
+
+.follow-me-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #33333370;
+  padding: 0px;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
-@media (min-width: 780px) {
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+.fadeOut {
+  animation: fadeOut 1s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-box {
     text-align: center;
+  }
+
+  .img-box img {
+    width: 70%;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .follow-me-text {
+    writing-mode: horizontal-tb;
   }
 }
 </style>
