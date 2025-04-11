@@ -1,362 +1,350 @@
 <template>
-  <vue-particles
-    id="tsparticles"
-    @particles-loaded="particlesLoaded"
-    :options="{
-      background: {
-        color: {
-          value: 'transparent',
-        },
-      },
-      fullScreen: {
-        enable: true,
-        zIndex: -1,
-      },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: 'push',
-          },
-          onHover: {
-            enable: true,
-            mode: 'repulse',
-          },
-        },
-        modes: {
-          bubble: {
-            distance: 400,
-            duration: 2,
-            opacity: 0.8,
-            size: 40,
-          },
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: '#ffffff',
-        },
-        links: {
-          color: '#ffffff',
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: 'none',
-          enable: true,
-          outModes: 'bounce',
-          random: false,
-          speed: 6,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 320,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: 'square',
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
-      },
-      detectRetina: true,
-    }"
-  />
-  <div
-    class="container animate-class"
-    :class="animationClass"
-    @click="toggleAnimation"
-  >
-    <div
-      class="container d-flex justify-content-center align-items-center"
-      style="height: 100vh"
-    >
-      <div class="row d-flex justify-content-around">
-        <div class="col-md-6">
-          <div class="contact">
-            <div class="head">
-              <h1 class="text-white">Get In Touch</h1>
-              <h1 class="text-warning">Would you like to, Say Hello!</h1>
-              <i class="fa fa-comment fa-lg"></i>
-            </div>
-            <div
-              class="body d-flex align-items-center justify-content-center"
-              style="height: 100px"
-            >
-              <a
-                href="mailto:tawshiq.rafi02@gmail.com"
-                class="text-center text-info my-5"
-                ><h1>Send An Email Now..!</h1></a
-              >
-            </div>
-
-            <!-- <form>
-          <label>Name</label>
-          <input type="text" />
-          <label>Email</label>
-          <input type="email" />
-          <label>Message</label>
-          <textarea placeholder="Enter Your Message"></textarea>
-          <button type="button">Send Message</button>
-        </form> -->
+  <vue-particles id="tsparticles" @particles-loaded="particlesLoaded" :options="particlesOptions" />
+  <div class="container animate-class" :class="animationClass">
+    <div class="content-wrapper">
+      <!-- Contact Card Section -->
+      <div class="contact-section">
+        <div class="contact-card">
+          <div class="contact-header">
+            <h1 class="title">Get In Touch</h1>
+            <h2 class="subtitle">Would you like to say Hello?</h2>
+            <i class="fa fa-comment fa-2x"></i>
           </div>
-          <div class="text-center">
-            <a
-              class="btn btn-floating m-1"
-              href="https://www.facebook.com/tawshiqulislam.rafi.3"
-              role="button"
-              ><i class="bi bi-facebook text-warning"></i
-            ></a>
-
-            <!-- Twitter -->
-            <a
-              class="btn btn-floating m-1"
-              href="https://github.com/tawshiqulislam"
-              role="button"
-              ><i class="bi bi-github text-warning"></i
-            ></a>
-
-            <!-- Google -->
-            <a
-              class="btn btn-floating m-1"
-              href="https://www.linkedin.com/in/tawshiqul-islam-rafi-417b501b9/"
-              role="button"
-              ><i class="bi bi-linkedin text-warning"></i
-            ></a>
+          <div class="contact-action">
+            <a href="mailto:tawshiq.rafi02@gmail.com" class="btn-contact">
+              Send An Email Now!
+            </a>
           </div>
-          <footer class="text-center footer text-white">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-              <!-- Section: Social media -->
-              <!-- <section class="mb-4">
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-facebook"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-github"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-linkedin"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-instagram"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-twitter"></i
-        ></a>
-        <a class="btn btn-floating m-1" href="#!" role="button"
-          ><i class="bi bi-behance"></i
-        ></a>
-      </section> -->
-
-              <div class="justify-content-center" style="bottom: 0">
-                <span
-                  >&copy; Developed By
-                  <a href="mailto:tawshiq.rafi02@gmail.com" class="text-white"
-                    >Tawshiqul Islam</a
-                  ></span
-                >
-              </div>
-
-              <!-- Section: Social media -->
-            </div>
-            <!-- Grid container -->
+          <div class="social-icons">
+            <a class="social-btn" href="https://www.facebook.com/tawshiqulislam.rafi.3" target="_blank"><i
+                class="bi bi-facebook"></i></a>
+            <a class="social-btn" href="https://github.com/tawshiqulislam" target="_blank"><i
+                class="bi bi-github"></i></a>
+            <a class="social-btn" href="https://www.linkedin.com/in/tawshiqul-islam-rafi-417b501b9/" target="_blank"><i
+                class="bi bi-linkedin"></i></a>
+          </div>
+          <footer class="contact-footer">
+            <span>&copy; Developed By <a href="mailto:tawshiq.rafi02@gmail.com">Tawshiqul Islam</a></span>
           </footer>
         </div>
-        <div class="col-md-4 py-5" style="margin-left: 50px !important">
-          <p class="text-warning h1">Would You Like To</p>
-          <p class="text-info h2">Get A Free Consaltancy</p>
-          <p class="text-white mt-3">
-            I'm excited to discuss your web development needs. So, I offer free
-            consultancy to help you navigate through the process. Whether you
-            need advice on technology choices, project planning, or overall
-            strategy.
-            <br />
-            Also, I like to talk about<br />
-          </p>
-          <ul class="mt-3 text-warning">
-            <li>different ideas,</li>
-            <li>future project planning,</li>
-            <li>system architecture,</li>
-            <li>planning about start-ups,</li>
-            <li>discussion about solving problem,</li>
-            <li>and new ways to acquire markets.</li>
-          </ul>
-          <p class="text-white mt-3">
-            Let's have a discussion and bring up some new ideas.
-            <br />
-            Let's collaborate and bring your web ideas to life!
-          </p>
-          <button
-            class="btn btn-outline-info border rounded-pill"
-            href="mailto:tawshiq.rafi02@gmail.com"
-          >
-            Make A Call For Meeting
-          </button>
-        </div>
+      </div>
+
+      <!-- Free Consultancy Information Section -->
+      <div class="info-section">
+        <h1 class="info-title text-warning">Would You Like To</h1>
+        <h2 class="info-subtitle text-info">Get A Free Consultancy</h2>
+        <p class="info-text text-white">
+          I'm excited to discuss your web development needs and offer free consultancy to help guide you through project
+          planning, technology choices, and overall strategy.
+          <br />
+          Let's talk about new ideas, future project planning, system architecture, startup strategies, problem solving,
+          and innovative market approaches.
+        </p>
+        <ul class="info-list text-warning">
+          <li>Innovative Ideas</li>
+          <li>Project Planning</li>
+          <li>System Architecture</li>
+          <li>Startup Strategies</li>
+          <li>Problem Solving</li>
+          <li>Market Expansion</li>
+        </ul>
+        <p class="info-text text-white">
+          Let's collaborate and bring your web ideas to life!
+        </p>
+        <a href="mailto:tawshiq.rafi02@gmail.com" class="btn btn-outline-info rounded-pill info-btn">
+          Make A Call For Meeting
+        </a>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
+  name: "ContactPage",
+  data() {
+    return {
+      animationClass: "fade-in",
+      particlesOptions: {
+        background: {
+          color: { value: 'transparent' },
+        },
+        fullScreen: {
+          enable: true,
+          zIndex: -1,
+        },
+        fpsLimit: 120,
+        interactivity: {
+          events: {
+            onClick: { enable: true, mode: 'push' },
+            onHover: { enable: true, mode: 'repulse' },
+          },
+          modes: {
+            bubble: { distance: 400, duration: 2, opacity: 0.8, size: 40 },
+            push: { quantity: 4 },
+            repulse: { distance: 200, duration: 0.4 },
+          },
+        },
+        particles: {
+          color: { value: '#ffffff' },
+          links: {
+            color: '#ffffff',
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1,
+          },
+          move: {
+            direction: 'none',
+            enable: true,
+            outModes: 'bounce',
+            random: false,
+            speed: 4,
+            straight: false,
+          },
+          number: {
+            density: { enable: false },
+            value: 120,
+          },
+          opacity: { value: 0.5 },
+          shape: { type: 'square' },
+          size: { value: { min: 1, max: 5 } },
+        },
+        detectRetina: true,
+      },
+    };
+  },
   methods: {
     particlesLoaded() {
-      // console.log("Particles container loaded", container);
+      // Callback when particles have loaded (optional)
+    },
+    toggleAnimation() {
+      // Toggle animation class if you want interactive effects on container click
+      this.animationClass = this.animationClass === 'fade-in' ? 'bounce-in' : 'fade-in';
     },
   },
 };
 </script>
+
 <style scoped>
+/* Global Resets */
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-body {
-  background: #a7cfdf;
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    #a7cfdf00 11%,
-    #23538a00 91%
-  );
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    #a7cfdf00 11%,
-    #23538a00 91%
-  );
-  background: radial-gradient(ellipse at center, #a7cfdf 11%, #23538a 91%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 );
-
-  font-family: Arial, Tahoma;
-}
-
-.contact {
-  width: 650px;
-  margin: 50px auto;
-  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);
-  margin-left: 0;
-  background-color: #00882271;
-  /* border-radius: 0 0 10px 10px; */
-  border-radius: 10px;
-}
-
-.contact .head {
-  padding: 30px;
-  background-color: #007abc71;
-  color: #fefefe;
-  overflow: hidden;
-  border-radius: 10px 10px 0 0;
-}
-
-.contact .head h3 {
   margin: 0;
-  float: left;
-  font-size: 18px;
-  letter-spacing: 2px;
+  padding: 0;
 }
 
-.contact .head i {
-  float: right;
-  color: #fefefe;
+/* Content wrapper for layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
 }
 
-.contact form {
+/* Content wrapper to center the contact card and info section */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Contact Card Section */
+.contact-section {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-card {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
   padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
-.contact form label {
-  display: block;
-  margin-bottom: 5px;
-  letter-spacing: 1px;
-  color: orange !important;
-}
-
-.contact form > input {
-  height: 32px;
+.contact-header {
   margin-bottom: 20px;
 }
 
-.contact form > input,
-.contact form > textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #eee;
+.contact-header .title {
+  font-size: 2.5rem;
+  color: #ffffff;
 }
 
-.contact form > textarea {
-  height: 90px;
-  margin-bottom: 40px;
-  resize: none;
+.contact-header .subtitle {
+  font-size: 1.8rem;
+  color: #ffc107;
+  margin: 10px 0;
 }
 
-.contact form button {
-  display: block;
-  width: 80%;
-  margin: auto;
-  padding: 18px;
-  letter-spacing: 1px;
-  background: #ffc107;
-  color: #fefefe;
+.contact-header i {
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.contact-action {
+  margin: 20px 0;
+}
+
+.btn-contact {
+  background: #64ffda;
+  color: #0a192f;
+  padding: 15px 30px;
   border: none;
-  border-radius: 40px;
-  -webkit-box-shadow: 0px 4px 8px rgba(165, 126, 157, 0.62);
-  box-shadow: 0px 4px 8px rgba(165, 126, 157, 0.62);
+  border-radius: 50px;
+  font-size: 1.2rem;
   cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.contact form > input:focus,
-.contact form > textarea:focus,
-.contact form button:focus {
-  outline: 0;
+.btn-contact:hover {
+  background: #52d0c4;
 }
 
-.contact .head h3,
-.contact form button {
-  text-transform: uppercase;
+.social-icons {
+  margin: 20px 0;
 }
 
-::-webkit-input-placeholder {
-  color: #d9d5d6;
+.social-btn {
+  font-size: 1.8rem;
+  margin: 0 10px;
+  color: #ffc107;
+  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-@media (max-width: 1199px) {
-  .container {
-    padding: 0 10px;
+.social-btn:hover {
+  color: #64ffda;
+}
+
+.contact-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.contact-footer a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+/* Info Section (Free Consultancy) */
+.info-section {
+  flex: 1 1 45%;
+  padding: 20px;
+  margin: 20px;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.info-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.info-subtitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.info-text {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.info-list {
+  list-style: none;
+  margin: 15px 0;
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+
+.info-list li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.info-list li::before {
+  content: "✔";
+  color: #64ffda;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.info-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.bounce-in {
+  animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .col-md-6,
-  .col-md-4 {
-    width: 100%;
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .my-5 {
-    margin-top: 0 !important;
-    margin-bottom: 20px !important;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  .py-5 {
-    padding-top: 0 !important;
-    padding-bottom: 20px !important;
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
   }
-  .contact {
-    width: auto;
-    margin: 20px auto;
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-section,
+  .info-section {
+    flex: 1 1 100%;
+    margin: 10px 0;
   }
 }
 </style>

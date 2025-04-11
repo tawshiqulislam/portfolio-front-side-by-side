@@ -8,11 +8,7 @@
     />
 
     <!-- Portfolio content -->
-    <div
-      class="container portfolio-content mt-2"
-      :class="animationClass"
-      @click="toggleAnimation"
-    >
+    <div class="container portfolio-content mt-2" :class="animationClass">
       <div class="row d-flex justify-content-around">
         <div class="col-md-12 text-right text-white">
           <h1 class="text-warning">PORTFOLIO</h1>
@@ -21,7 +17,13 @@
       </div>
 
       <!-- Projects Carousel -->
-      <Carousel v-bind="settings" :breakpoints="breakpoints" :transition="500">
+      <Carousel
+        v-bind="settings"
+        :breakpoints="breakpoints"
+        :autoplay="3500"
+        :wrap-around="true"
+        :transition="500"
+      >
         <Slide v-for="project in projects" :key="project.id">
           <div class="project-card">
             <div class="project-image-container">
@@ -49,27 +51,20 @@
               </p>
 
               <!-- Technology section (conditionally rendered) -->
-              <div v-if="project.technology" class="project-tech">
+              <div v-if="project.technology" class="project-tech truncate-line">
                 <span class="tech-label">Technologies:</span>
-                <span
-                  class="tech-item"
-                  v-for="(tech, idx) in project.technology"
-                  :key="idx"
-                >
-                  {{ tech }}
-                </span>
+                <div class="tech-items truncate-text">
+                  <span
+                    class="tech-item"
+                    v-for="(tech, idx) in project.technology"
+                    :key="idx"
+                  >
+                    {{ tech }}
+                  </span>
+                </div>
               </div>
 
-              <div class="project-tags">
-                <span
-                  class="project-tag"
-                  v-for="(tag, index) in project.tags"
-                  :key="index"
-                  >{{ tag }}</span
-                >
-              </div>
-
-              <div class="project-actions">
+              <div class="project-actions mt-4 mb-2">
                 <button
                   @click.stop="openProjectDetails(project)"
                   class="action-btn details-btn"
@@ -182,20 +177,16 @@ export default defineComponent({
       // Responsive breakpoints
       breakpoints: {
         400: {
-          itemsToShow: 1,
+          itemsToShow: 1.5,
           snapAlign: "center",
         },
         700: {
-          itemsToShow: 2,
-          snapAlign: "center",
-        },
-        900: {
-          itemsToShow: 3,
+          itemsToShow: 2.5,
           snapAlign: "center",
         },
         1200: {
-          itemsToShow: 4,
-          snapAlign: "start",
+          itemsToShow: 3.5,
+          snapAlign: "center",
         },
       },
       // Particles configuration
@@ -477,8 +468,9 @@ export default defineComponent({
 /* Improved image container */
 .project-image-container {
   position: relative;
-  overflow: hidden;
-  height: 250px; /* Made smaller as requested */
+  /* overflow: hidden; */
+  height: 250px;
+  /* Made smaller as requested */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -487,12 +479,38 @@ export default defineComponent({
 .project-image {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Better fit for image */
+  object-fit: contain;
+  /* Better fit for image */
   transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-image {
   transform: scale(1.1);
+}
+
+.truncate-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+
+.truncate-text::after {
+  content: " ...";
+  position: absolute;
+  right: 0;
+  background: linear-gradient(to right, transparent, #0a192f);
+  padding-left: 5px;
+  color: #64ffda;
 }
 
 /* Enhanced overlay with multiple buttons */
@@ -577,13 +595,20 @@ export default defineComponent({
   flex-grow: 1;
 }
 
-/* New technology section */
 .project-tech {
   margin-top: 0.75rem;
   display: flex;
-  flex-wrap: wrap;
+  align-items: baseline;
   gap: 5px;
-  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.tech-items-container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
 }
 
 .tech-label {
@@ -593,33 +618,50 @@ export default defineComponent({
   margin-right: 5px;
 }
 
-.tech-item {
-  color: #64ffda;
-  font-size: 0.75rem;
-  background: rgba(100, 255, 218, 0.05);
-  padding: 2px 6px;
-  border-radius: 4px;
-  border: 1px solid rgba(100, 255, 218, 0.2);
+.project-tech {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
 }
 
-.tech-item:not(:last-child):after {
-  content: ",";
+.tech-item {
+  display: inline;
+  color: #64ffda;
+  font-size: 0.75rem;
+}
+
+.tech-item:not(:last-child)::after {
+  content: ", ";
 }
 
 .project-tags {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 1rem;
 }
 
 .project-tag {
+  display: inline-block;
   background: rgba(100, 255, 218, 0.1);
   color: #64ffda;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+}
+
+.project-tag:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 576px) {
+  .project-tag {
+    margin-bottom: 0;
+  }
 }
 
 /* Modal styling for project details */
@@ -656,6 +698,7 @@ export default defineComponent({
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -811,6 +854,7 @@ export default defineComponent({
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -822,10 +866,12 @@ export default defineComponent({
     opacity: 0;
     transform: scale(0.8);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
