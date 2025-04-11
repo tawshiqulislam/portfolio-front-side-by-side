@@ -1,5 +1,9 @@
 <template>
-  <vue-particles id="tsparticles" @particles-loaded="particlesLoaded" :options="particlesOptions" />
+  <vue-particles
+    id="tsparticles"
+    @particles-loaded="particlesLoaded"
+    :options="particlesOptions"
+  />
   <div class="container animate-class" :class="animationClass">
     <div class="content-wrapper">
       <!-- Contact Card Section -->
@@ -16,15 +20,32 @@
             </a>
           </div>
           <div class="social-icons">
-            <a class="social-btn" href="https://www.facebook.com/tawshiqulislam.rafi.3" target="_blank"><i
-                class="bi bi-facebook"></i></a>
-            <a class="social-btn" href="https://github.com/tawshiqulislam" target="_blank"><i
-                class="bi bi-github"></i></a>
-            <a class="social-btn" href="https://www.linkedin.com/in/tawshiqul-islam-rafi-417b501b9/" target="_blank"><i
-                class="bi bi-linkedin"></i></a>
+            <a
+              class="social-btn"
+              href="https://www.facebook.com/tawshiqulislam.rafi.3"
+              target="_blank"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a
+              class="social-btn"
+              href="https://github.com/tawshiqulislam"
+              target="_blank"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a
+              class="social-btn"
+              href="https://www.linkedin.com/in/tawshiqul-islam-rafi-417b501b9/"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
           </div>
           <footer class="contact-footer">
-            <span>&copy; Developed By <a href="mailto:tawshiq.rafi02@gmail.com">Tawshiqul Islam</a></span>
+            <span
+              >&copy; Developed By
+              <a href="mailto:tawshiq.rafi02@gmail.com"
+                >Tawshiqul Islam</a
+              ></span
+            >
           </footer>
         </div>
       </div>
@@ -34,11 +55,13 @@
         <h1 class="info-title text-warning">Would You Like To</h1>
         <h2 class="info-subtitle text-info">Get A Free Consultancy</h2>
         <p class="info-text text-white">
-          I'm excited to discuss your web development needs and offer free consultancy to help guide you through project
-          planning, technology choices, and overall strategy.
+          I'm excited to discuss your web development needs and offer free
+          consultancy to help guide you through project planning, technology
+          choices, and overall strategy.
           <br />
-          Let's talk about new ideas, future project planning, system architecture, startup strategies, problem solving,
-          and innovative market approaches.
+          Let's talk about new ideas, future project planning, system
+          architecture, startup strategies, problem solving, and innovative
+          market approaches.
         </p>
         <ul class="info-list text-warning">
           <li>Innovative Ideas</li>
@@ -51,7 +74,10 @@
         <p class="info-text text-white">
           Let's collaborate and bring your web ideas to life!
         </p>
-        <a href="mailto:tawshiq.rafi02@gmail.com" class="btn btn-outline-info rounded-pill info-btn">
+        <a
+          href="mailto:tawshiq.rafi02@gmail.com"
+          class="btn btn-outline-info rounded-pill info-btn"
+        >
           Make A Call For Meeting
         </a>
       </div>
@@ -67,7 +93,7 @@ export default {
       animationClass: "fade-in",
       particlesOptions: {
         background: {
-          color: { value: 'transparent' },
+          color: { value: "transparent" },
         },
         fullScreen: {
           enable: true,
@@ -76,8 +102,8 @@ export default {
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: { enable: true, mode: 'push' },
-            onHover: { enable: true, mode: 'repulse' },
+            onClick: { enable: true, mode: "push" },
+            onHover: { enable: true, mode: "repulse" },
           },
           modes: {
             bubble: { distance: 400, duration: 2, opacity: 0.8, size: 40 },
@@ -86,18 +112,18 @@ export default {
           },
         },
         particles: {
-          color: { value: '#ffffff' },
+          color: { value: "#ffffff" },
           links: {
-            color: '#ffffff',
+            color: "#ffffff",
             distance: 150,
             enable: true,
             opacity: 0.5,
             width: 1,
           },
           move: {
-            direction: 'none',
+            direction: "none",
             enable: true,
-            outModes: 'bounce',
+            outModes: "bounce",
             random: false,
             speed: 4,
             straight: false,
@@ -107,7 +133,7 @@ export default {
             value: 120,
           },
           opacity: { value: 0.5 },
-          shape: { type: 'square' },
+          shape: { type: "square" },
           size: { value: { min: 1, max: 5 } },
         },
         detectRetina: true,
@@ -120,7 +146,8 @@ export default {
     },
     toggleAnimation() {
       // Toggle animation class if you want interactive effects on container click
-      this.animationClass = this.animationClass === 'fade-in' ? 'bounce-in' : 'fade-in';
+      this.animationClass =
+        this.animationClass === "fade-in" ? "bounce-in" : "fade-in";
     },
   },
 };

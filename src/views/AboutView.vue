@@ -1,6 +1,14 @@
 <template>
-  <vue-particles id="tsparticles" @particles-loaded="particlesLoaded" :options="particlesOptions" />
-  <div class="container animate-class" :class="animationClass" @click="toggleAnimation">
+  <vue-particles
+    id="tsparticles"
+    @particles-loaded="particlesLoaded"
+    :options="particlesOptions"
+  />
+  <div
+    class="container animate-class"
+    :class="animationClass"
+    @click="toggleAnimation"
+  >
     <div class="row d-flex justify-content-around mt-2">
       <div class="col-md-12 text-right text-white">
         <h1 class="text-warning">About</h1>
@@ -8,11 +16,15 @@
       </div>
     </div>
     <div class="row d-flex justify-content-around pb-2">
-      <div class="img-box position-relative col-md-4 mt-2 mx-2 d-flex justify-content-center align-items-center">
+      <div
+        class="img-box position-relative col-md-4 mt-2 mx-2 d-flex justify-content-center align-items-center"
+      >
         <img :src="userData.authorImg" :alt="userData.authorName" />
         <div class="img-box-outline"></div>
       </div>
-      <div class="about-box col-md-7 mx-2 mt-2 d-flex justify-content-start align-items-center">
+      <div
+        class="about-box col-md-7 mx-2 mt-2 d-flex justify-content-start align-items-center"
+      >
         <div class="card-body bg-transparent">
           <span class="h4">Hello! Once Again</span>
           <h2 class="card-title">
@@ -24,23 +36,32 @@
             </p>
           </div>
           <div class="button d-flex justify-content-start">
-            <a href="mailto:tawshiq.rafi02@gmail.com" class="btn btn-outline-warning rounded-pill py-2 px-4">Contact
-              Now</a>
+            <a
+              href="mailto:tawshiq.rafi02@gmail.com"
+              class="btn btn-outline-warning rounded-pill py-2 px-4"
+              >Contact Now</a
+            >
           </div>
           <div class="footer-button-section my-4">
-            <div class="col-md-3 badge bg-warning text-black footer-button mx-2 my-1">
+            <div
+              class="col-md-3 badge bg-warning text-black footer-button mx-2 my-1"
+            >
               <p class="text-start">
                 <span class="h5">{{ userProfile.exp }}+</span><br />
                 Experience
               </p>
             </div>
-            <div class="col-md-3 badge bg-light text-black footer-button mx-2 my-1">
+            <div
+              class="col-md-3 badge bg-light text-black footer-button mx-2 my-1"
+            >
               <p class="text-start">
                 <span class="h5">{{ userProfile.project }}+</span><br />
                 Projects
               </p>
             </div>
-            <div class="col-md-3 badge bg-transparent footer-button fbtn-last mx-2 my-1">
+            <div
+              class="col-md-3 badge bg-transparent footer-button fbtn-last mx-2 my-1"
+            >
               <p class="text-start">
                 <span class="h5">{{ userProfile.client }}+</span><br />
                 Happy Clients
@@ -185,7 +206,7 @@ export default {
   background-color: rgba(172, 172, 174, 0.322);
 }
 
-.img-box>img {
+.img-box > img {
   width: 250px;
   border-radius: 20px;
 }
@@ -229,7 +250,7 @@ export default {
   border: 1px solid red;
 }
 
-.fbtn-last>p {
+.fbtn-last > p {
   color: gold;
 }
 
